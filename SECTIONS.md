@@ -10,7 +10,7 @@ I am a Software Developer who specializes in building robust, secure backend arc
 
 Tech Stack: Python, JavaScript, TypeScript, SQL, HTML/CSS, FastAPI, React.js, PostgreSQL, Docker, Docker Compose, AWS (S3), Git
 
-Links: [github.com/gustavo2023](https://github.com/gustavo2023) | [linkedin.com/in/gustavogg.dev](https://linkedin.com/in/gustavogg.dev) | gustavoegutierrezg23@gmail.com
+Links: [GitHub](https://github.com/gustavo2023) | [LinkedIn](https://www.linkedin.com/in/gustavo-gutierrez-dev/) | gustavoegutierrezg23@gmail.com
 
 ## 2. Experience Section
 

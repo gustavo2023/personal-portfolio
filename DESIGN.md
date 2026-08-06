@@ -1,521 +1,255 @@
 ---
-version: alpha
-name: OpenCode-design-analysis
-description: |
-  A terminal-native marketing system rendered entirely in Berkeley Mono — every word on the page, from the hero headline down to the footer fine print, is monospaced. The page itself reads like a manpage or a static-site README: warm cream canvas (`#fdfcfc`), nearly-black ink (`#201d1d`), 4px-radius rectangles for the few interactive elements, and bracketed `[+]`/`[-]` ASCII markers used as bullets. The brand's only "visual moment" is a single dark hero card that mocks up the OpenCode TUI itself — black background, monospaced terminal output, ASCII pipe characters, and a wordmark rendered as block-pixel ASCII. Every section sits as a hairline-bordered text block on the cream canvas with no shadows, no gradients, no decorative imagery, and no non-monospaced character anywhere in the system.
-
+name: Gustavo Gutierrez — Portfolio
+description: Single-page developer portfolio on a warm dark canvas with light ink type, one signal-orange accent, and hairline structure; evidence over ornament.
 colors:
-  primary: "#201d1d"
-  on-primary: "#fdfcfc"
-  ink: "#201d1d"
-  ink-deep: "#0f0000"
-  charcoal: "#302c2c"
-  body: "#424245"
-  mute: "#646262"
-  stone: "#6e6e73"
-  ash: "#9a9898"
-  canvas: "#fdfcfc"
-  surface-soft: "#f8f7f7"
-  surface-card: "#f1eeee"
-  surface-dark: "#201d1d"
-  surface-dark-elevated: "#302c2c"
-  hairline: "rgba(15,0,0,0.12)"
-  hairline-strong: "#646262"
-  on-dark: "#fdfcfc"
-  on-dark-mute: "#9a9898"
-  accent: "#007aff"
-  accent-hover: "#0056b3"
-  accent-active: "#004085"
-  warning: "#ff9f0a"
-  warning-hover: "#cc7f08"
-  warning-active: "#995f06"
-  danger: "#ff3b30"
-  danger-hover: "#d70015"
-  danger-active: "#a50011"
-  success: "#30d158"
-
+  paper: "#1f1b17"
+  surface: "#2a2622"
+  ink: "#f7f6f4"
+  body: "#d8d5d0"
+  mute: "#9e9a94"
+  hairline: "rgba(247, 246, 244, 0.12)"
+  signal: "#ff4d00"
+  signal-deep: "#d63f00"
+  signal-text: "#ff7a33"
 typography:
-  display-xl:
-    fontFamily: Berkeley Mono
-    fontSize: 38px
-    fontWeight: 700
-    lineHeight: 1.5
-    letterSpacing: 0
-  heading-md:
-    fontFamily: Berkeley Mono
-    fontSize: 16px
-    fontWeight: 700
-    lineHeight: 1.5
-    letterSpacing: 0
-  body-md:
-    fontFamily: Berkeley Mono
-    fontSize: 16px
+  display:
+    fontFamily: "Archivo Variable, Helvetica Neue, Arial, sans-serif"
+    fontSize: "5.5rem"
+    fontWeight: 800
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
+    fontVariation: "'wdth' 125"
+  headline:
+    fontFamily: "Archivo Variable, Helvetica Neue, Arial, sans-serif"
+    fontSize: "3rem"
+    fontWeight: 800
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
+    fontVariation: "'wdth' 125"
+  title:
+    fontFamily: "Archivo Variable, Helvetica Neue, Arial, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 600
+    lineHeight: 1.4
+    letterSpacing: "-0.025em"
+  body:
+    fontFamily: "Archivo Variable, Helvetica Neue, Arial, sans-serif"
+    fontSize: "1rem"
     fontWeight: 400
-    lineHeight: 1.5
-    letterSpacing: 0
-  body-strong:
-    fontFamily: Berkeley Mono
-    fontSize: 16px
-    fontWeight: 500
-    lineHeight: 1.5
-    letterSpacing: 0
-  body-tight:
-    fontFamily: Berkeley Mono
-    fontSize: 16px
-    fontWeight: 500
-    lineHeight: 1
-    letterSpacing: 0
-  link-md:
-    fontFamily: Berkeley Mono
-    fontSize: 16px
+    lineHeight: 1.625
+  label:
+    fontFamily: "JetBrains Mono Variable, ui-monospace, SFMono-Regular, Menlo, monospace"
+    fontSize: "0.8125rem"
     fontWeight: 400
-    lineHeight: 1.5
-    letterSpacing: 0
-  button-md:
-    fontFamily: Berkeley Mono
-    fontSize: 16px
-    fontWeight: 500
-    lineHeight: 2
-    letterSpacing: 0
-  caption-md:
-    fontFamily: Berkeley Mono
-    fontSize: 14px
-    fontWeight: 400
-    lineHeight: 2
-    letterSpacing: 0
-
+    letterSpacing: "0px"
 rounded:
-  none: 0px
-  sm: 4px
-  full: 9999px
-
+  full: "9999px"
+  focus: "2px"
 spacing:
-  xxs: 1px
-  xs: 4px
-  sm: 8px
-  md: 12px
-  lg: 16px
-  xl: 24px
-  xxl: 32px
-  section: 96px
-
+  gutter: "24px"
+  gutter-md: "40px"
+  section-y: "80px"
+  section-y-md: "112px"
+  section-y-lg: "128px"
+  row-y: "40px"
+  heading-gap: "48px"
 components:
   button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button-md}"
-    rounded: "{rounded.sm}"
-    padding: 4px 20px
-    height: 36px
-  button-primary-active:
-    backgroundColor: "{colors.ink-deep}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button-md}"
-    rounded: "{rounded.sm}"
+    backgroundColor: "{colors.signal}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.full}"
+    padding: "10px 20px"
+  button-primary-hover:
+    backgroundColor: "{colors.signal-deep}"
+    textColor: "{colors.ink}"
   button-secondary:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.button-md}"
-    rounded: "{rounded.sm}"
-    padding: 4px 20px
-  button-tab:
-    backgroundColor: "transparent"
-    textColor: "{colors.mute}"
-    typography: "{typography.button-md}"
-    rounded: "{rounded.none}"
-    padding: 8px 16px
-  button-tab-active:
     backgroundColor: "transparent"
     textColor: "{colors.ink}"
-    typography: "{typography.button-md}"
-    rounded: "{rounded.none}"
-  button-disabled:
-    backgroundColor: "{colors.surface-card}"
-    textColor: "{colors.ash}"
-    rounded: "{rounded.sm}"
-  badge-news:
-    backgroundColor: "{colors.surface-dark}"
-    textColor: "{colors.on-dark}"
-    typography: "{typography.caption-md}"
-    rounded: "{rounded.sm}"
-    padding: 2px 8px
-  text-input:
-    backgroundColor: "{colors.surface-soft}"
+    rounded: "{rounded.full}"
+    padding: "10px 20px"
+  chip-featured:
+    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.sm}"
-    padding: 8px 12px
-    height: 40px
-  text-input-focused:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.sm}"
-  textarea:
-    backgroundColor: "{colors.surface-soft}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.sm}"
-    padding: 12px
-  install-snippet:
-    backgroundColor: "{colors.surface-card}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.sm}"
-    padding: 12px 16px
-  hero-tui-mockup:
-    backgroundColor: "{colors.surface-dark}"
-    textColor: "{colors.on-dark}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.none}"
-    padding: 64px 32px
-  tui-prompt-row:
-    backgroundColor: "{colors.surface-dark-elevated}"
-    textColor: "{colors.on-dark}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.sm}"
-    padding: 8px 12px
-  list-row:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.body}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.none}"
-    padding: 8px 0px
-  faq-row:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.none}"
-    padding: 12px 0px
-  testimonial-row:
-    backgroundColor: "{colors.surface-soft}"
-    textColor: "{colors.body}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.sm}"
-    padding: 16px 20px
-  chart-tile:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.body}"
-    typography: "{typography.caption-md}"
-    rounded: "{rounded.none}"
-    padding: 16px
-  primary-nav:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-strong}"
-    rounded: "{rounded.none}"
-    height: 56px
-  footer-section:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.body}"
-    typography: "{typography.caption-md}"
-    rounded: "{rounded.none}"
-    padding: 32px 0px
+    rounded: "{rounded.full}"
+    padding: "6px 12px"
   link-inline:
     textColor: "{colors.ink}"
-    typography: "{typography.link-md}"
-  badge-section-label:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    typography: "{typography.heading-md}"
-    rounded: "{rounded.none}"
+  link-inline-hover:
+    textColor: "{colors.signal}"
+  link-accent:
+    textColor: "{colors.signal-text}"
+  body-text:
+    textColor: "{colors.body}"
+    typography: "{typography.body}"
+  data-text:
+    textColor: "{colors.mute}"
+    typography: "{typography.label}"
+  marker-square:
+    backgroundColor: "{colors.signal}"
+    size: "4px"
+  divider:
+    backgroundColor: "{colors.hairline}"
+    height: "1px"
+    width: "100%"
 ---
+
+# Design System: Gustavo Gutierrez — Portfolio
 
 ## Overview
 
-OpenCode's marketing site is rendered entirely in Berkeley Mono — every word on the page, from the 38px hero headline down to the 14px footer fine print, sits in the same monospaced face. The visual identity comes from that single typographic decision: the page reads like a manpage or a static-site README, complete with bracketed `[+]` / `[-]` / `[x]` ASCII markers used in place of icons or bullets, and a wordmark rendered as block-pixel ASCII art at the top of the nav. There is no sans-serif anywhere, no display face, no italics, no decorative ornament — the system is one font and one weight away from being a 1990s `whatis` page rendered at modern resolutions.
+**Creative North Star: "The Warm Night Proof"**
 
-The chrome is austere: warm cream canvas (`{colors.canvas}` — `#fdfcfc` with a faint blush), nearly-black ink (`{colors.ink}` — `#201d1d`), and a 4-tier neutral gray ladder for body, metadata, and disabled text. Cards don't exist as raised surfaces — sections are just hairline-bordered text blocks (`{colors.hairline}` 1px) sitting directly on the canvas with `{spacing.section}` (96px) air between them. The single "visual" moment in the entire system is a full-bleed dark hero card (`{colors.surface-dark}` — true near-black) that mocks up the OpenCode TUI itself: a terminal frame with `tab` / `ctrl-p` keybinding hints, a "Build" command line, and the OpenCode wordmark rendered as a pixel-block ASCII title.
+The modern developer portfolio played straight at full craft under a warm night: the person leads, production proof persuades, and nothing performs. The canvas is a deliberate warm dark (#1f1b17) rather than a generic black, so the light ink type feels like reading by lamplight and the signal-orange accent lands as a controlled glow rather than a warning. The first viewport already holds face, name, role, proof, and contact; every scroll stop after is another row of evidence. There are no metric heroes, no icon-card grids, no scroll tricks — the content is the persuasion.
 
-The semantic palette is unusual for a brand-marketing site: it ships the full Apple Human Interface Guidelines accent ramp — `{colors.accent}` (Apple Blue `#007aff`), `{colors.danger}` (`#ff3b30`), `{colors.warning}` (`#ff9f0a`), `{colors.success}` (`#30d158`) plus their hover/active deepenings — even though the marketing surfaces themselves only use these colors in the dark hero TUI mockup as syntax-highlight stand-ins. The wider palette belongs to the in-product TUI; the marketing pages mostly stay in monochrome.
+The material character is quiet and flat: one dark ground, one slightly lighter surface for the rare elevated moment, and 1px translucent hairlines as the only structure. Signal orange exists in the system as a budget — fills for primary pills and hover states, tiny proof markers, text selection, focus rings, and the one readable accent line per screen. Type does the expressive work: expanded, extra-bold Archivo (never above 6rem) declares, plain Archivo explains, and JetBrains Mono is admitted only to read data — dates, stack, locations, URLs, availability — like a caption track for facts.
+
+Iconography is intentionally narrow: one icon library, `react-icons`, mapped through a single `DevIcon` component. Technology names render with Simple Icons in the hero metadata row, the featured core-stack chips, the full stack list, and project stacks; email, GitHub, LinkedIn, and download links use Font Awesome brand/action glyphs. Motion is one grammar and one ease: elements fade and rise 18–24px on an expo curve, exactly once, staggered by tens of milliseconds; the hero adds a single clip-path opening on the portrait. Under `prefers-reduced-motion` every entrance disappears, scroll snapping becomes auto, and the page simply is. Confirmed rejections: shadows, gradients, blurs, tonal cards, decorative mono, large raw-orange text on dark, and any template tell that would make a recruiter's scan about the site instead of the person.
 
 **Key Characteristics:**
-- 100% Berkeley Mono typography across every text role — no sans-serif fallback anywhere in the chrome
-- Warm cream `{colors.canvas}` (#fdfcfc) as the only body background — no surface alternation across sections
-- Single dark surface (`{colors.surface-dark}` — #201d1d) reserved exclusively for the hero TUI mockup
-- 4px radius (`{rounded.sm}`) on every interactive element; sections themselves are sharp rectangles bordered in 1px hairline
-- ASCII bracket markers (`[+]`, `[-]`, `[x]`) used as bullet glyphs in feature lists and FAQ rows
-- Block-pixel ASCII wordmark in the primary nav and inside the hero TUI — the brand identity is its own ASCII art
-- 96px `{spacing.section}` rhythm between every section, with no decorative dividers; only thin 1px `{colors.hairline}` rules separate content blocks
+- Person-led split hero: name at display scale left, real portrait filling the right column with a gradient `.hero-mask`, key metadata (location, core stack, availability) living directly in the text column.
+- Warm dark canvas with structure declared once by 1px translucent hairlines; zero shadows or gradients; the only luminous exception is the portrait's subtle drop-shadow edge.
+- One signal-orange accent with a dedicated bright text variant for dark; restraint is the brand.
+- Two type voices: expanded Archivo for declaration, JetBrains Mono strictly for data.
+- One icon system: `react-icons` (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through `DevIcon`; no authored directional glyph.
+- Rows, not cards: experience and projects persuade as hairline-divided editorial entries; About uses surface-background chips only for the featured core stack.
+- One motion ease (expo), one reveal pattern, fired once; reduced motion is fully honored.
 
 ## Colors
 
-> **Source pages:** `/` (home), `/zen`, `/enterprise`. The chrome palette is identical across all three.
+A warm near-neutral dark field — canvas, surface, light ink, two grays, one translucent hairline — with a single hot orange and its readable small-text variant. Frontmatter keys track the `@theme` tokens in `src/index.css`.
 
-### Brand & Accent
-- **Ink** (`{colors.primary}` / `{colors.ink}` — `#201d1d`): the brand's only "color." Headlines, body text, primary CTA fill, nav links, and every solid icon. Treats nearly-black as the brand color rather than pure black to keep type readable on the warm cream canvas.
-- **Ink Deep** (`{colors.ink-deep}` — `#0f0000`): pressed-state for the primary CTA. Carries a faint red undertone matching the canvas's warm cast.
-- **Cream** (`{colors.canvas}` — `#fdfcfc`): the brand's signature warm white. Used for every page body, every card surface, the on-primary text color, and the ASCII wordmark fill on dark.
+### Primary
+- **Signal Orange** (#ff4d00, `--color-signal`): the system's one accent. Fills primary pill buttons (text flips to ink), the 4px square markers on experience proof lines, the text-selection background, the global focus ring, and the hover color/underline on links. Never a large background field, never small reading text on dark.
+- **Signal Deep** (#d63f00, `--color-signal-deep`): the pressed/hover depth step of the accent. Used when a signal-filled element is hovered or active — primary buttons deepen from signal to signal-deep.
+- **Signal Text** (#ff7a33, `--color-signal-text`): the readable small-signal variant on dark. Sets the availability line in the hero's fold strip and the contact section's email address. Replaces the previous light-theme `signal-ink` role.
 
-### Surface
-- **Canvas Cream** (`{colors.canvas}` — `#fdfcfc`): every page body, every card.
-- **Soft Surface** (`{colors.surface-soft}` — `#f8f7f7`): text-input default background, testimonial row fill, alternating row tint.
-- **Surface Card** (`{colors.surface-card}` — `#f1eeee`): install-snippet pill, disabled button fill, slightly-elevated section row.
-- **Surface Dark** (`{colors.surface-dark}` — `#201d1d`): the hero TUI mockup background and the dark CTA pill on the home page. Identical to `{colors.ink}` — the brand uses one near-black for both text and dark surfaces.
-- **Surface Dark Elevated** (`{colors.surface-dark-elevated}` — `#302c2c`): the prompt-row inside the hero TUI mockup, one notch lighter than the dark surface itself.
-- **Hairline** (`{colors.hairline}` — `rgba(15,0,0,0.12)`): 1px section divider. The translucent warm tint matches the cream canvas's undertone.
-- **Hairline Strong** (`{colors.hairline-strong}` — `#646262`): tab strip's bottom rule and stronger inline divider.
+### Neutral
+- **Warm Dark Canvas** (#1f1b17, `--color-paper`): the ground under every section; also the dark value behind light-ink text. Deliberately not pure black — it carries a warm brown undertone.
+- **Elevated Surface** (#2a2622, `--color-surface`): the one reserved step up from the canvas. Used in the About section for the featured core-stack chips (`Python`, `FastAPI`, `PostgreSQL`) so they read as discrete tokens without leaving the dark world. Available for future panels, cards, or detail pages.
+- **Light Ink** (#f7f6f4, `--color-ink`): headings, titles, wordmark, key link text, and the text that sits on signal fills.
+- **Warm Body** (#d8d5d0, `--color-body`): all long-form copy — bio, tagline, proof lines, project overviews, and the résumé request link.
+- **Warm Mute** (#9e9a94, `--color-mute`): the data color — mono dates, companies, stack lists, locations, footer.
+- **Translucent Hairline** (`rgba(247, 246, 244, 0.12)`, `--color-hairline`): every border and divider at 1px; also the resting underline on inline links and the ghost-pill stroke. Derived from ink so the boundary stays subtle on dark.
 
-### Text
-- **Ink** (`{colors.ink}` — `#201d1d`): headlines, body text, primary nav links, button text on light surfaces.
-- **Charcoal** (`{colors.charcoal}` — `#302c2c`): subtly softer body where pure ink is too heavy.
-- **Body** (`{colors.body}` — `#424245`): default paragraph text and FAQ answers.
-- **Mute** (`{colors.mute}` — `#646262`): tab labels (default state), metadata, footer link text, in-list secondary annotations.
-- **Stone** (`{colors.stone}` — `#6e6e73`): least-emphasis utility text, breadcrumb separators.
-- **Ash** (`{colors.ash}` — `#9a9898`): disabled text and secondary annotation in dark TUI mockup, also TUI mockup secondary color.
+### Named Rules
+**The One Voice Rule.** Signal orange is the only hue beyond the warm neutrals, and it spends like a budget: hover states, tiny markers, selection, focus, and at most one accent text element per screen (the availability line; the email address). Its rarity is the point.
 
-### Semantic
-The full Apple Human Interface Guidelines semantic ramp ships with the system. On marketing pages these colors appear primarily inside the hero TUI mockup as syntax-highlight stand-ins; in the in-product TUI they carry their conventional meaning.
-
-- **Accent** (`{colors.accent}` — `#007aff`): primary informational signal, in-product link color, TUI command highlight.
-- **Accent Hover** (`{colors.accent-hover}` — `#0056b3`): pressed informational link.
-- **Accent Active** (`{colors.accent-active}` — `#004085`): deeply-pressed informational state.
-- **Danger** (`{colors.danger}` — `#ff3b30`): destructive confirmation, error state.
-- **Danger Hover** (`{colors.danger-hover}` — `#d70015`): pressed destructive.
-- **Danger Active** (`{colors.danger-active}` — `#a50011`): deeply-pressed destructive.
-- **Warning** (`{colors.warning}` — `#ff9f0a`): caution callouts.
-- **Warning Hover** (`{colors.warning-hover}` — `#cc7f08`): pressed caution.
-- **Warning Active** (`{colors.warning-active}` — `#995f06`): deeply-pressed caution.
-- **Success** (`{colors.success}` — `#30d158`): positive confirmation, in-TUI success indicator.
+**The Readable Signal Rule.** Raw signal (#ff4d00) never sets small reading text on dark — it blooms against the canvas. Text that must be orange on dark uses signal-text (#ff7a33); raw signal is for fills, markers, rings, and hover moments.
 
 ## Typography
 
-### Font Family
-**Berkeley Mono** is the proprietary monospaced face used across every text role in the system. It carries weights 400 (regular), 500 (medium), and 700 (bold) and falls back through a long monospace stack — IBM Plex Mono → ui-monospace → SFMono-Regular → Menlo → Monaco → Consolas → Liberation Mono → Courier New.
+**Display Font:** Archivo Variable (Helvetica Neue, Arial fallback), width axis expanded to 125%
+**Body Font:** Archivo Variable, normal width
+**Label/Mono Font:** JetBrains Mono Variable (ui-monospace, SFMono-Regular, Menlo fallback)
 
-The single-font decision is the brand. There is no display face, no body sans, no italic alternative, and no fallback to a proportional font anywhere — even the legal copyright row uses Berkeley Mono at 14px. This is the most aggressive typographic restraint of any site in the marketing-tools category: OpenCode's identity is "the marketing page is a man page."
+**Character:** One grotesque family does all the talking — expanded and extra-bold when it declares, plain when it explains — while a mono is admitted only to read out data. The pairing reads as a well-set engineering dossier lit for late-night review: confident headline, quiet evidence.
 
 ### Hierarchy
+- **Display** (800, clamp(2.9rem, 7.2vw, 5.5rem), line-height 0.98, -0.02em, wdth 125, `text-wrap: balance`): the hero name, broken over two lines; the largest type on the page and the only voice at this scale.
+- **Headline** (800, clamp(2rem, 4vw, 3rem), same display rules): section headings — About, Experience, Projects. The contact pitch stretches the same voice to clamp(2.4rem, 5.5vw, 4.5rem) on a 16ch measure.
+- **Title** (600, 1.25rem, line-height 1.4, -0.025em, normal width): job roles and project names.
+- **Role line** (500, 1.125rem, ink): "Software Developer — Backend systems", directly under the name.
+- **Body** (400, 1rem, line-height 1.625, warm body): all prose, with the measure capped per context — 52ch hero tagline, 68ch about bio, 70ch proof lines and project text.
+- **Label / Data** (400, 0.8125rem, JetBrains Mono, letter-spacing 0): the `.data` rule — dates, stack, locations, URLs, availability, footer. UI chrome (nav links, buttons) is 0.875rem Archivo medium, not mono.
 
-| Token | Size | Weight | Line Height | Letter Spacing | Use |
-|---|---|---|---|---|---|
-| `{typography.display-xl}` | 38px | 700 | 1.5 | 0 | Hero headline ("The open source AI coding agent") |
-| `{typography.heading-md}` | 16px | 700 | 1.5 | 0 | Section label ("What is OpenCode?", "FAQ", "Built for privacy first") |
-| `{typography.body-md}` | 16px | 400 | 1.5 | 0 | Body copy, paragraph text, list-row text, install-snippet code |
-| `{typography.body-strong}` | 16px | 500 | 1.5 | 0 | Inline emphasis, primary nav link, tab-label active |
-| `{typography.body-tight}` | 16px | 500 | 1 | 0 | Compact label rendered without breathing room |
-| `{typography.link-md}` | 16px | 400 | 1.5 | 0 | Inline anchor link in body prose |
-| `{typography.button-md}` | 16px | 500 | 2 | 0 | Every button label across the system |
-| `{typography.caption-md}` | 14px | 400 | 2 | 0 | Footer link text, badge label, copyright row, chart caption |
+### Named Rules
+**The Data-Only Mono Rule.** JetBrains Mono exists to set data: dates, stack, locations, URLs, availability. It never sets prose, headings, buttons, or decoration. Mono is evidence, never costume.
 
-### Principles
-The hierarchy is built almost entirely from size and weight contrast on a single face. The display headline (38px / 700) and the heading-md label (16px / 700) share a weight; the difference is just size. Body and link share size, weight, and line-height — only context distinguishes them. Buttons get a deliberately tall line-height (2.0) so labels feel calmly spaced inside the 4px-radius rectangle.
-
-### Note on Font Substitutes
-Berkeley Mono is a paid commercial font. Open-source substitutes that approximate its metrics within ~3% at body sizes:
-- **JetBrains Mono** — closest match for stroke contrast and x-height; pair at weights 400 / 500 / 700.
-- **IBM Plex Mono** — official secondary fallback in the documented font stack; slightly more open counters but matches line-height behavior.
-- **Geist Mono** — modern alternative with similar geometric construction.
-
-When substituting, line-height behavior is preserved by keeping `lineHeight: 1.5` for body and `lineHeight: 2` for buttons — adjusting weight is rarely needed.
+**The Six-Rem Ceiling.** The display voice never exceeds 6rem; the shipped maximum is 5.5rem. Past that the expanded grotesque stops declaring and starts shouting.
 
 ## Layout
 
-### Spacing System
-- **Base unit:** 8px (with finer 1/2/4px steps available for tight inline gaps).
-- **Tokens (front matter):** `{spacing.xxs}` (1px) · `{spacing.xs}` (4px) · `{spacing.sm}` (8px) · `{spacing.md}` (12px) · `{spacing.lg}` (16px) · `{spacing.xl}` (24px) · `{spacing.xxl}` (32px) · `{spacing.section}` (96px).
-- **Universal section rhythm:** every page in the set uses `{spacing.section}` (96px) as the vertical gap between major content blocks. This is the largest spacing token in the system and is the dominant layout cue across the home, `/zen`, and `/enterprise` pages.
-- **Section internal padding:** content rows inside a section sit at `{spacing.lg}` (16px) vertical with no horizontal padding — text starts flush at the section's left edge.
+One centered measure, hairline-divided sections, and a single split-screen moment.
 
-### Grid & Container
-- **Max width:** ~960px content column for body sections; the dark hero TUI mockup is full-bleed within an outer ~1100px content frame.
-- **Two-column split:** `/enterprise` pairs a left text block (~360px wide) with a right-aligned form column (~480px wide). The home page is single-column reading.
-- **Footer:** 5-up horizontal link row (GitHub / Docs / Changelog / Discord / X) at desktop, collapsing to 2-up at tablet and 1-up at mobile.
-
-### Whitespace Philosophy
-Whitespace is structural and generous. Sections sit 96px apart with no decorative dividers between them — the `{colors.hairline}` 1px rule is the only signal of separation. Inside a section, content is left-flush against the column edge with no internal indentation; bullets use ASCII bracket prefixes (`[+]` / `[-]`) instead of indent-based layout. The result is a page that feels like a printed code listing rather than a styled marketing layout.
+- **Container:** centered `max-w-6xl` (72rem) with 24px gutters stepping to 40px at `md`. Everything hangs on this one column; the only full-bleed elements are the 1px section rules that cross it.
+- **Section rhythm:** 80px vertical padding stepping to 112px at `md` (128px for the contact closer). Sections separate with a single bottom hairline; rows inside them separate with a single top hairline. Headings sit 48px above their content.
+- **Hero (the one split):** at `lg`, a two-column grid — 1.05fr text / 0.95fr portrait — with the text column vertically centered at min-height 82vh. The portrait has no dividing border; instead it uses `.hero-mask` to blend its left shoulder into the dark canvas. Below `lg` the portrait stacks under the text at min-height 54vh behind a top hairline. The portrait image fills its column absolutely, `object-cover` anchored `object-top`.
+- **Hero mask:** `.hero-mask` applies a vertical `mask-image` gradient (transparent → black 5%) at `lg` and a bottom fade at smaller viewports, plus a soft `drop-shadow(0 0 32px rgba(247,246,244,0.06))` to lift the shoulder edge without adding a real shadow elsewhere.
+- **Hero metadata row:** location, core stack with inline Simple Icons, and availability in signal-text, set in the data voice inside the hero text column below the contact buttons. No separate fold strip.
+- **About:** display heading left, bio plus featured core-stack chips and mono stack list right, in a 0.9fr/1.1fr grid at `lg` with a 40px gap. The three featured chips (`Python`, `FastAPI`, `PostgreSQL`) sit on the surface background; the rest of the stack is rendered as inline icon + name pairs in the data voice. Icons render at 22px in featured chips and 18px elsewhere.
+- **Experience rows:** at `md`, a fixed 16rem mono meta column (period over company) beside the proof column; 40px vertical padding, 48px column gap.
+- **Project rows:** content left, date and repo link in an auto column right-aligned at `lg`; below `lg` the meta row spreads date and link to opposite ends. Stack lists use inline Simple Icons at 18px.
+- **Responsive:** Tailwind default breakpoints — `sm` 640px, `md` 768px, `lg` 1024px. Below `sm` the nav anchors collapse away, leaving the wordmark and the Email pill; below `lg` every grid stacks single-column.
+- `html` scrolls smooth (forced to `auto` under reduced motion); sections are anchor-linked (`#about`, `#experience`, `#projects`, `#contact`), and a skip link appears on focus as a signal pill.
+- **Scrollbar:** hidden on all viewports (`scrollbar-width: none` for Firefox, `::-webkit-scrollbar { display: none; }` for WebKit) while scroll functionality remains intact.
 
 ## Elevation & Depth
 
-| Level | Treatment | Use |
-|---|---|---|
-| 0 — Flat | No border, no shadow | Default for body sections, list rows, hero text block, footer |
-| 1 — Hairline rule | 1px solid `{colors.hairline}` (translucent warm tint) | Section dividers, between major content blocks |
-| 2 — Hairline strong | 1px solid `{colors.hairline-strong}` | Tab strip bottom rule, in-list emphasized divider |
-| 3 — Inverted dark | `{colors.surface-dark}` fill | Hero TUI mockup, dark CTA pill — the system's only "elevated" surface uses color, not shadow |
+The system is flat, full stop. No shadows, no gradients, no blur. Depth is declared by two things: a single 1px translucent hairline (`rgba(247, 246, 244, 0.12)`) at every boundary, and the one reserved elevated surface (`#2a2622`) used sparingly for featured chips and held for future panels. The only luminous exception is the hero portrait's `.hero-mask` drop-shadow (`0 0 32px rgba(247,246,244,0.06)`), which exists only to soften the shoulder edge against the canvas — it is not a general elevation token.
 
-There are no drop shadows in the system. Nothing lifts, nothing floats. The only way an element registers as "above" another is the dark surface used in the hero mockup.
+The only luminous moments are state, not elevation: text selection paints signal orange with light-ink text, and keyboard focus draws a 2px signal ring offset 3px with the system's only other radius (2px).
 
-### Decorative Depth
-Depth comes from typography density and the single dark TUI mockup, not from CSS effects:
-- **ASCII block-pixel wordmark** — the OpenCode brand name rendered as a 5-row block of monospaced character cells, used in the primary nav and as the centerpiece of the hero TUI mockup.
-- **Hero TUI mockup** — full-bleed `{colors.surface-dark}` rectangle containing a faux terminal interface: ASCII wordmark, a `tui-prompt-row` showing a Build command line, and `tab switch agent` / `ctrl-p commands` keybinding hints in `{colors.ash}` at the bottom edge.
-- **Chart tiles** — three thin-line ASCII charts inside the home page's "open source AI coding agent" stat block, with abstract dotted/sparse-line plots in `{colors.body}` against the cream canvas. Captions sit beneath in `{typography.caption-md}` (`Fig 1. 150K GitHub Stars`, `Fig 2. 850 Contributors`, `Fig 3. 6.5M Monthly Devs`).
+### Named Rules
+**The Declared-Once Rule.** Every separation is one 1px hairline, declared once. If two elements need more distinction, adjust space or type — never add a second border, a shadow, or a fill.
 
 ## Shapes
 
-### Border Radius Scale
+Two silhouettes and nothing between: interactive controls are pills (fully rounded, 9999px) and everything else is square (0px) — sections, rows, data. The focus ring carries the system's only other radius (2px). The hero portrait is the one softened form: `.hero-mask` clips it with a linear gradient so the left shoulder dissolves into the canvas rather than presenting a hard rectangle. The recurring geometry is small and exact: a 4px signal square marking each proof line at 0.65em, and 18–22px icons from `react-icons` paired with their labels.
 
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.none}` | 0px | Sections, hero TUI mockup, primary nav, footer, list rows — every container that isn't a button |
-| `{rounded.sm}` | 4px | Every interactive element — primary CTA, secondary CTA, text inputs, install snippet, badges, prompt rows |
-| `{rounded.full}` | 9999px | Avatar circles in testimonials |
-
-The radius vocabulary is two values: 4px for interactive elements and 0px for everything else. Avatar circles in testimonial rows are the only fully-rounded element in the system.
-
-### Photography Geometry
-There is no photography. Visual elements are limited to:
-- **ASCII block-pixel wordmark** in the nav and hero TUI mockup.
-- **Inline ASCII charts** inside the stat-block section — abstract sparse-line and dotted plots without specific data points.
-- **Avatar dots** (~32px) inside testimonial rows on `/zen` — flat colored circles in `{rounded.full}`.
-- **In-product icons** (kbd, A+, ⊕, ↻, K, Z) rendered as small monospaced character glyphs, not bitmaps or SVG.
+### Named Rules
+**The Pill-or-Square Rule.** Radius exists on interactive pills and the 2px focus outline, nowhere else. Images, rows, and containers never round; if it isn't a button, it's a rectangle.
 
 ## Components
 
-> **No hover states documented** per system policy. Each spec covers Default and Active/Pressed only.
-
-### Buttons
-
-**`button-primary`** — the universal OpenCode CTA
-- Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.button-md}`, padding `4px 20px`, height ~36px, rounded `{rounded.sm}` (4px).
-- Used for "Download" (top nav), "Get started with Zen", "Send" (enterprise contact form), "Subscribe" (newsletter footer), "Read docs →".
-- Pressed state lives in `button-primary-active` — background drops to `{colors.ink-deep}`.
-
-**`button-secondary`** — outlined alternative
-- Background `{colors.canvas}`, text `{colors.ink}`, 1px solid `{colors.hairline-strong}` border, type `{typography.button-md}`, padding `4px 20px`, rounded `{rounded.sm}`.
-- Lower-emphasis CTA — appears beside the primary fill where two actions are paired.
-
-**`button-tab`** + **`button-tab-active`** — install-tab strip
-- Default: transparent background, text `{colors.mute}`, type `{typography.button-md}`, padding `8px 16px`, rounded `{rounded.none}`.
-- Active: same surface, text `{colors.ink}`, with a 2px `{colors.ash}` bottom underline indicating selection.
-- Used in the install-method tab strip on the home page (`curl` / `npm` / `bun` / `brew` / `yay`).
-
-**`button-disabled`**
-- Background `{colors.surface-card}`, text `{colors.ash}`, rounded `{rounded.sm}`.
-
-### Badges & Chips
-
-**`badge-news`** — small dark chip in the news/announcement strip
-- Background `{colors.surface-dark}`, text `{colors.on-dark}`, type `{typography.caption-md}`, padding `2px 8px`, rounded `{rounded.sm}`.
-- Sits inline with body copy as a "News" / "Beta" / "Live now" tag on the home page above the hero headline.
-
-**`badge-section-label`** — bracketed section header
-- Background transparent, text `{colors.ink}`, type `{typography.heading-md}`, rounded `{rounded.none}`.
-- Renders as a bare `**Heading**` line above a 1px `{colors.hairline}` rule with no chip background — but the way the text reads ("[+]", "[x]", `What is OpenCode?`) makes it function as a label component.
-
-### Inputs & Forms
-
-**`text-input`** + **`text-input-focused`**
-- Default: background `{colors.surface-soft}`, text `{colors.ink}`, 1px solid `{colors.hairline}`, type `{typography.body-md}`, padding `8px 12px`, height ~40px, rounded `{rounded.sm}`.
-- Focused: background flips to `{colors.canvas}`, border becomes 1px solid `{colors.ink}` (the canvas's flat focus signal — no halo, no glow).
-- Used for every contact-form field on `/enterprise` (Full name, Role, Company, Company email, Phone number) and the newsletter email field at the home page footer.
-
-**`textarea`**
-- Background `{colors.surface-soft}`, text `{colors.ink}`, 1px solid `{colors.hairline}`, type `{typography.body-md}`, padding `12px`, rounded `{rounded.sm}`.
-- "What problem are you trying to solve?" multi-line textarea on `/enterprise`.
-
-**`install-snippet`** — the home page's signature install code block
-- Background `{colors.surface-card}` (`#f1eeee`), text `{colors.ink}` rendered in `{typography.body-md}` (already monospaced — Berkeley Mono), padding `12px 16px`, rounded `{rounded.sm}`.
-- Contains the literal `curl -fsSL https://opencode.ai/install | bash` command with a small copy-icon at the right edge. Sits below the install-method tab strip.
-
-### Cards & Containers
-
-**`hero-tui-mockup`** — the home page's signature TUI preview
-- Container: full-bleed `{colors.surface-dark}` (~near-black), padding `64px 32px`, rounded `{rounded.none}`.
-- Contents (top → bottom): ASCII block-pixel "OPENCODE" wordmark centered in `{colors.on-dark}`; a `{component.tui-prompt-row}` showing a "Build" command line with model selector text; an `tab switch agent  ctrl-p commands` keybinding hint row at the bottom in `{colors.ash}`.
-
-**`tui-prompt-row`** — the inset command line inside the TUI mockup
-- Background `{colors.surface-dark-elevated}` (`#302c2c`), text `{colors.on-dark}` in `{typography.body-md}`, padding `8px 12px`, rounded `{rounded.sm}`.
-- Renders an inline command (`Build  Claude Opus 4.5  OpenCode Zen`) with a leading vertical pipe and the model name styled as a bracketed token.
-
-**`list-row`** — feature/benefit row with ASCII bracket bullet
-- Background `{colors.canvas}`, text `{colors.body}` in `{typography.body-md}`, padding `8px 0`.
-- Each row begins with a `[+]` / `[-]` / `[x]` ASCII marker followed by a bold label and a regular description: e.g., `[+] LSP enabled    Automatically loads the right LSPs for the IDE`. The bracket marker is part of the text content, not a separate icon.
-
-**`faq-row`** — FAQ entry with bracket toggle
-- Background `{colors.canvas}`, text `{colors.ink}` in `{typography.body-md}`, padding `12px 0`, with a 1px `{colors.hairline}` bottom rule.
-- Each row leads with `+` / `−` ASCII markers indicating expand/collapse state. Always rendered as plain text rows — no chevron icons, no animated accordion chrome.
-
-**`testimonial-row`** — `/zen` peer-quote row
-- Background `{colors.surface-soft}`, text `{colors.body}` in `{typography.body-md}`, padding `16px 20px`, rounded `{rounded.sm}`.
-- Layout: a 32px avatar circle (`{rounded.full}`) at left, name + role + company in `{typography.body-strong}` on the first line, quote in `{typography.body-md}` `{colors.body}` on the second line.
-
-**`chart-tile`** — the stat-block sparse-line chart
-- Background `{colors.canvas}`, text `{colors.body}` in `{typography.caption-md}`, rounded `{rounded.none}`, padding `16px`.
-- Contains an inline SVG/CSS-drawn ASCII-style sparse-line plot (dotted, abstract — never specific data points) with a `Fig N. <stat label>` caption beneath in `{colors.mute}`.
+### DevIcon (icon system)
+A single component in `src/components/DevIcon.jsx` imports `react-icons` and maps technology names and link keys to their SVG icons. `kind="tech"` resolves stack items like `Python`, `FastAPI`, `PostgreSQL`, `Docker`, etc. from Simple Icons; `kind="link"` resolves `github`, `linkedin`, `email`, and `download` from Font Awesome. Icons are rendered at 18–22px, `currentColor`, inline next to their label. Direct exports `GithubIcon`, `LinkedinIcon`, `EmailIcon`, and `DownloadIcon` are used for pills that don't go through the name map.
 
 ### Navigation
+A quiet bar over a bottom hairline. Wordmark left ("Gustavo Gutierrez", 14px semibold, tight tracking, ink); right, anchor links — About, Experience, Projects, Contact — (14px warm body, ink on hover, 200ms color transition) beside a signal "Email me" pill with the `FaEnvelope` icon and the label. The anchors hide below `sm` (640px); the pill always stays. No logo mark, no hamburger.
 
-**`primary-nav`**
-- Background `{colors.canvas}`, text `{colors.ink}` in `{typography.body-strong}`, height ~56px, rounded `{rounded.none}`, with a 1px `{colors.hairline}` bottom rule.
-- Layout (desktop): block-pixel ASCII OpenCode wordmark at left (~120×24px), nav links cluster center-right ("GitHub [150K] · Docs · Zen · Go · Enterprise"), `{component.button-primary}` "Download" CTA at the far right with a small download glyph.
+### Buttons
+- **Shape:** fully rounded pills (9999px), 200ms color-only transitions.
+- **Primary (signal pill):** signal fill (#ff4d00), ink text, 14px medium; padding 10px 20px in the hero, 8px 16px in the nav. Hover deepens to signal-deep (#d63f00) with ink text — the accent's loudest sanctioned moment. The hero email and nav "Email me" pills lead with the `FaEnvelope` icon.
+- **Secondary (ghost pill):** transparent on the dark canvas with a 1px hairline stroke and ink text; hover firms the stroke to ink. The hero GitHub pill uses the `FaGithub` icon; the hero LinkedIn pill uses the `FaLinkedin` icon; the hero Download CV pill uses the `FaDownload` icon and links to `/assets/cv.pdf`.
+- **Focus:** the global 2px signal outline, offset 3px.
 
-**Top Nav (Mobile)**
-- ASCII wordmark stays at left, nav links collapse into a hamburger drawer at the right. The Download CTA remains visible at every breakpoint.
+### Links
+- **Inline link:** ink, 14px medium, hairline underline offset 4px, leading brand icon; hover turns both text and underline signal. Repo links lead with the `FaGithub` icon; LinkedIn leads with the `FaLinkedin` icon.
+- **Email display link (signature):** the contact section's single oversized action — signal-text (#ff7a33) text (20px stepping to 24px at `md`, 500 weight), an underline in 40% signal offset 8px, and a 28px `FaEnvelope` icon. Hover inverts to ink text with a full-signal underline. The one place orange leads at reading size on dark.
+
+### Featured Core-Stack Chip
+A surface-background pill (6px 12px padding, 14px medium ink text, 9999px radius) holding a 22px Simple Icon and a technology name. Used only in About for `Python`, `FastAPI`, and `PostgreSQL` to mark the featured core stack. Non-featured stack items use the same icon + name pairing but without the surface background, in the data voice.
+
+### Experience Row
+The persuasion unit. Top hairline, 40px vertical rhythm. Left: mono mute meta (period over company) in a 16rem column at `md`. Right: role title (20px semibold, tight tracking, ink) over proof lines (16px/1.625 warm body, 70ch cap), each marked by a 4px signal square at 0.65em. Rows reveal once on scroll, staggered 60ms.
+
+### Project Row
+An editorial entry, not a card. Project name (20px semibold, ink) with its mono kind descriptor sharing the baseline; two prose paragraphs at a 70ch measure; a mono stack list with inline Simple Icons at 18px; and a meta zone holding the mono date plus an underlined "View on GitHub" link led by the `FaGithub` icon — right-aligned column at `lg`, spread row below it. No thumbnails, no cards, no tag chips.
+
+### Contact
+The closer: a display headline up to 4.5rem on a 16ch measure ("Have a backend worth building? Let's talk."), then the email display link with a `FaEnvelope` icon, then GitHub (`FaGithub` icon) and LinkedIn (`FaLinkedin` icon) inline links, and finally a Download CV ghost pill (`FaDownload` icon) linking to `/assets/cv.pdf`.
 
 ### Footer
+One top hairline, one mono mute row: copyright and name left, location right; stacks on small screens.
 
-**`footer-section`**
-- Background `{colors.canvas}`, text `{colors.body}` in `{typography.caption-md}`, padding `32px 0`, with a 1px `{colors.hairline}` top rule.
-- Top row: 5-column horizontal link grid (GitHub [150K] · Docs · Changelog · Discord · X), each rendered as a centered cell separated by 1px `{colors.hairline}` vertical rules.
-- Bottom row: `©2026 Anomaly` copyright at left, `Brand · Privacy · Terms · English ▼` utility cluster at right, all in `{typography.caption-md}` `{colors.mute}`.
+### Reveal (motion primitive)
+The one scroll animation: fade plus rise (18px default, 24px for project rows) over 0.7s on the shared expo ease `cubic-bezier(0.16, 1, 0.3, 1)`, triggered `whileInView` exactly once with a -64px viewport margin, staggered 60–80ms per sibling. Under `prefers-reduced-motion` it renders a plain div. The hero adds two load-time moves on the same ease: staggered rises (0.9s, 80ms apart across name, role, tagline, contact row, metadata row) and the portrait's clip-path opening (inset 6% → 0 with scale 1.04 → 1, over 1.1s).
 
-### Inline
+### Cursor (custom pointer)
+A `motion/react` driven custom cursor rendered in `App.jsx`. On fine-pointer devices it hides the default cursor, tracks the pointer with `useSpring` (`damping: 25`, `stiffness: 400`), and scales from 14 px to 48 px on interactive elements (`a`, `button`, `[role='button']`, inputs, `[data-cursor-hover]`). The default state is an ink dot with `mix-blend-difference`; the hover state is a larger signal-orange ring with `mix-blend-difference`. It is hidden under `prefers-reduced-motion` and on coarse-pointer devices so touch users keep the native cursor.
 
-**`link-inline`** — body-prose anchor link
-- `{colors.ink}` text with underline. The brand's only link affordance — even links inside body paragraphs use ink color rather than `{colors.accent}` blue. Apple Blue is reserved for the in-product TUI.
+### MagicPill (hover glow)
+Wraps the About tech-stack chips. Uses `useMotionValue`, `useSpring`, and `useMotionTemplate` to render a radial signal-orange glow that follows the pointer inside the pill on hover, plus a subtle `-translate-y-0.5` lift. Inspired by Magic UI's `MagicCard` gradient mode, but constrained to the existing warm-dark palette and pill shape. The glow is `pointer-events-none` and clipped by `overflow-hidden`.
 
 ## Do's and Don'ts
 
-### Do
-- Render every text role in Berkeley Mono. The single-font decision is the entire identity.
-- Keep `{colors.canvas}` (`#fdfcfc`) as the only body background. Don't introduce gray section bands.
-- Use ASCII bracket markers (`[+]`, `[-]`, `[x]`, `+`, `−`) as bullets, toggles, and section glyphs. They are the brand's only iconography.
-- Anchor the dark `{component.hero-tui-mockup}` exactly once per landing page as the hero centerpiece. Never use the dark surface for body content.
-- Reserve `{colors.accent}` (Apple Blue) and the rest of the semantic ramp for in-TUI states; marketing chrome stays monochrome.
-- Use `{rounded.sm}` (4px) on every interactive element and `{rounded.none}` (0px) on every container.
-- Stack content sections at `{spacing.section}` (96px) rhythm with only 1px `{colors.hairline}` rules between them.
+### Do:
+- **Do** set display type in expanded Archivo (wdth 125, 800 weight, -0.02em tracking, 0.98 line-height) and keep it under 6rem.
+- **Do** reserve JetBrains Mono (`.data`, 13px) for data: dates, stack lists, locations, URLs, availability, footer lines.
+- **Do** set small signal text on dark in signal-text (#ff7a33); keep raw signal (#ff4d00) for fills, markers, selection, focus rings, and hover states.
+- **Do** keep the ground warm dark canvas (#1f1b17) and use surface (#2a2622) as the only elevated surface for featured chips or future panels.
+- **Do** separate with single 1px translucent hairlines (`rgba(247, 246, 244, 0.12)`) and let whitespace do the rest: 80→112px section rhythm, 40px row rhythm, 48px under headings.
+- **Do** keep buttons as signal or ghost pills with 200ms color transitions.
+- **Do** use `react-icons` (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through `DevIcon`; render them inline at 18–22px in their label color, never as standalone decoration.
+- **Do** animate on the one expo ease (0.16, 1, 0.3, 1), rising 18–24px, once per element, and honor `prefers-reduced-motion`.
+- **Do** show the real portrait large with `.hero-mask` — the person leads the page.
+- **Do** link the Download CV button to `/assets/cv.pdf`; add the PDF at that path so the download works.
 
-### Don't
-- Don't introduce a sans-serif body font, a display face, or an italic style. Berkeley Mono carries everything.
-- Don't add drop shadows, gradients, or atmospheric backgrounds. The system is flat-on-cream.
-- Don't replace the ASCII bracket markers with SVG icons. The brackets are the icons.
-- Don't use the semantic accent ramp (`{colors.accent}`, `{colors.warning}`, `{colors.danger}`, `{colors.success}`) on marketing CTAs. They belong to the in-product TUI.
-- Don't pad cards with 24px+ internal padding. List rows sit at 8px vertical; FAQ rows at 12px.
-- Don't render the OpenCode wordmark as a vector logo. It is always block-pixel ASCII.
-- Don't fill the hero TUI mockup with photography or illustration. It is text-only and always shows a faux terminal command line.
-
-## Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|---|---|---|
-| desktop-large | 1280px+ | Default — 960px content column, 5-up footer link grid |
-| desktop | 1024px | Same layout; nav remains horizontal |
-| tablet | 850px | Footer collapses to 2-up grid; `/enterprise` two-column form stacks |
-| tablet-narrow | 768px | Primary nav becomes hamburger drawer; Download CTA stays visible |
-| mobile | 640px | Single-column everything; hero display drops 38px → ~28px; section padding tightens |
-
-### Touch Targets
-All interactive elements meet WCAG AA at the ~36–40px height range. `{component.button-primary}` sits at ~36px with 20px horizontal padding. `{component.text-input}` and `{component.textarea}` sit at ~40px. `{component.button-tab}` rows in the install-method strip sit at ~32–36px depending on label length but extend to a full 44px tappable cell via inline padding. Footer links use `{typography.caption-md}` (14px) but receive ~28px line-height (caption-md is 2.0) plus 8px vertical padding for a comfortable ~44px tappable row.
-
-### Collapsing Strategy
-- **Primary nav:** desktop horizontal cluster → tablet-narrow hamburger drawer at 768px. The dark "Download" CTA stays visible at all widths.
-- **Hero TUI mockup:** maintains its full-bleed dark surface at every breakpoint; the ASCII wordmark scales proportionally and the keybinding-hint row may wrap to two lines on narrow screens.
-- **Install snippet + tab strip:** desktop fixed-width pill → mobile full-width pill with horizontal scroll on the tab strip if labels overflow.
-- **Footer:** 5-up horizontal link grid → 2-up at tablet → 1-up at mobile (each link becomes a full-width row).
-- **`/enterprise` two-column layout:** desktop 50/50 → tablet stacks to single-column with the form below the text block.
-- **Section padding:** `{spacing.section}` (96px) desktop → 64px tablet → 48px mobile.
-- **Hero headline:** `{typography.display-xl}` (38px) at desktop, scaling to ~28px at mobile, line-height holding at 1.5.
-
-### Image Behavior
-There are no raster images in the system aside from the favicon and OG share image. Every visual element — wordmarks, charts, icons — is rendered as type or inline SVG and scales without aspect-ratio considerations.
-
-## Iteration Guide
-
-1. Focus on ONE component at a time. Pull its YAML entry and verify every property resolves.
-2. Reference component names and tokens directly (`{colors.ink}`, `{component.hero-tui-mockup}`, `{rounded.sm}`) — do not paraphrase.
-3. Run `npx @google/design.md lint DESIGN.md` after edits — `broken-ref`, `contrast-ratio`, and `orphaned-tokens` warnings flag issues automatically.
-4. Add new variants as separate component entries (`-active`, `-disabled`) — do not bury them inside prose.
-5. Default body to `{typography.body-md}`; reach for `{typography.body-strong}` for emphasis; reserve `{typography.display-xl}` strictly for the page-top hero headline.
-6. Keep `{colors.surface-dark}` scarce — at most one full-bleed dark mockup per page. The dark surface is a narrative device, not a chrome treatment.
-7. When introducing a new component, ask whether it can be expressed with the existing ASCII-bracket + 4px-radius + Berkeley-Mono vocabulary before adding new tokens. The system's strength is that it almost never needs new ones.
-
-## Known Gaps
-
-- **Mobile screenshots not captured** — responsive behavior synthesizes OpenCode's mobile pattern (hamburger drawer, single-column, footer accordion) from desktop evidence and the breakpoint stack.
-- **Hover states not documented** by system policy.
-- **In-product TUI screenshots** beyond the marketing hero mockup are not in the captured set; the actual `opencode` terminal interface (full keybindings, panels, status bar) is not documented here.
-- **`/go` page** not extracted — the marketing page for the Go SDK likely shares the same chrome but introduces code-sample blocks not documented above.
-- **Form validation state styling** (success / error inline messages) not present in the captured surfaces.
+### Don't:
+- **Don't** add shadows, gradients, blurs, or tonal cards — separation is one hairline, declared once. (The portrait's `.hero-mask` drop-shadow is the lone image-edge exception, not a general elevation token.)
+- **Don't** introduce arbitrary icon sets, emoji, client logos, or decorative glyphs; the only admitted icons are `react-icons` (Simple Icons + Font Awesome) mapped through `DevIcon`.
+- **Don't** set prose, headings, or decoration in mono; mono is data, not costume.
+- **Don't** fill backgrounds with raw signal or set small text in raw signal on dark; the accent stays rare and readable.
+- **Don't** build icon-card grids, metric heroes, tag chips, or gimmick scroll effects — the template tells this system refuses.
+- **Don't** round containers, images, or rows; radius belongs to pills (9999px) and the 2px focus ring only.
+- **Don't** invent a second accent, a light section, or a third typeface; one canvas, one ink, one orange, two voices.

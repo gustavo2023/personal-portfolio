@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-06T22:53:00Z",
+  "title": "Design System: Gustavo Gutierrez — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Dark Canvas",
+        "canonical": "#1f1b17",
+        "tonalRamp": [
+          "oklch(12% 0.015 70)",
+          "oklch(20% 0.014 70)",
+          "oklch(30% 0.013 72)",
+          "oklch(42% 0.012 75)",
+          "oklch(55% 0.011 78)",
+          "oklch(70% 0.009 80)",
+          "oklch(84% 0.006 82)",
+          "oklch(96% 0.003 85)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Elevated Surface",
+        "canonical": "#2a2622",
+        "tonalRamp": [
+          "oklch(16% 0.015 70)",
+          "oklch(24% 0.014 70)",
+          "oklch(34% 0.013 72)",
+          "oklch(46% 0.012 75)",
+          "oklch(59% 0.011 78)",
+          "oklch(73% 0.009 80)",
+          "oklch(86% 0.006 82)",
+          "oklch(97% 0.003 85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Light Ink",
+        "canonical": "#f7f6f4",
+        "tonalRamp": [
+          "oklch(20% 0.01 70)",
+          "oklch(30% 0.009 75)",
+          "oklch(42% 0.008 78)",
+          "oklch(56% 0.007 80)",
+          "oklch(70% 0.006 82)",
+          "oklch(82% 0.005 85)",
+          "oklch(91% 0.004 88)",
+          "oklch(98% 0.002 90)"
+        ]
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "Warm Body",
+        "canonical": "#d8d5d0",
+        "tonalRamp": [
+          "oklch(25% 0.012 75)",
+          "oklch(36% 0.011 78)",
+          "oklch(48% 0.01 80)",
+          "oklch(60% 0.009 82)",
+          "oklch(71% 0.008 84)",
+          "oklch(81% 0.007 86)",
+          "oklch(90% 0.005 88)",
+          "oklch(97% 0.003 90)"
+        ]
+      },
+      "mute": {
+        "role": "neutral",
+        "displayName": "Warm Mute",
+        "canonical": "#9e9a94",
+        "tonalRamp": [
+          "oklch(28% 0.015 75)",
+          "oklch(38% 0.014 78)",
+          "oklch(50% 0.013 80)",
+          "oklch(61% 0.012 82)",
+          "oklch(71% 0.011 84)",
+          "oklch(81% 0.009 86)",
+          "oklch(90% 0.006 88)",
+          "oklch(97% 0.003 90)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Translucent Hairline",
+        "canonical": "rgba(247, 246, 244, 0.12)",
+        "tonalRamp": [
+          "oklch(20% 0.01 70)",
+          "oklch(30% 0.009 75)",
+          "oklch(42% 0.008 78)",
+          "oklch(56% 0.007 80)",
+          "oklch(70% 0.006 82)",
+          "oklch(82% 0.005 85)",
+          "oklch(91% 0.004 88)",
+          "oklch(98% 0.002 90)"
+        ]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#ff4d00",
+        "tonalRamp": [
+          "oklch(18% 0.07 43)",
+          "oklch(30% 0.13 43)",
+          "oklch(42% 0.18 43)",
+          "oklch(54% 0.22 43)",
+          "oklch(66% 0.235 43)",
+          "oklch(75% 0.2 43)",
+          "oklch(85% 0.14 45)",
+          "oklch(95% 0.06 50)"
+        ]
+      },
+      "signal-deep": {
+        "role": "primary",
+        "displayName": "Signal Deep",
+        "canonical": "#d63f00",
+        "tonalRamp": [
+          "oklch(15% 0.06 43)",
+          "oklch(26% 0.11 43)",
+          "oklch(38% 0.16 43)",
+          "oklch(50% 0.2 43)",
+          "oklch(58% 0.21 43)",
+          "oklch(68% 0.19 43)",
+          "oklch(80% 0.13 45)",
+          "oklch(93% 0.06 50)"
+        ]
+      },
+      "signal-text": {
+        "role": "primary",
+        "displayName": "Signal Text",
+        "canonical": "#ff7a33",
+        "tonalRamp": [
+          "oklch(25% 0.06 45)",
+          "oklch(38% 0.1 45)",
+          "oklch(50% 0.14 45)",
+          "oklch(62% 0.17 45)",
+          "oklch(72% 0.18 45)",
+          "oklch(80% 0.15 46)",
+          "oklch(88% 0.1 48)",
+          "oklch(96% 0.05 52)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero name only; expanded Archivo (wdth 125) at up to 5.5rem, capped under 6rem."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings (About, Experience, Projects) and the contact pitch, in the same expanded display voice."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Job roles and project names; semibold Archivo at normal width, tight tracking."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All prose; Archivo 1rem/1.625 in warm body, measure capped 52–70ch by context."
+      },
+      "label": {
+        "displayName": "Data",
+        "purpose": "The .data rule — JetBrains Mono 13px for dates, stack, locations, URLs, availability; never prose or costume."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing for all entrance motion; shared by hero rises, portrait reveal, and every Reveal."
+      },
+      {
+        "name": "hero-rise",
+        "value": "opacity 0 → 1, y 24px → 0 over 0.9s, staggered 80ms",
+        "purpose": "Load-time entrance for name, role line, tagline, and contact row."
+      },
+      {
+        "name": "hero-portrait",
+        "value": "clip-path inset(6%) → inset(0) with scale 1.04 → 1 over 1.1s, delay 0.15s",
+        "purpose": "The one image treatment: the portrait opens its frame on load."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity 0 → 1, y 18px (24px project rows) → 0 over 0.7s, whileInView once, viewport margin -64px, stagger 60ms",
+        "purpose": "The only scroll animation; each element animates exactly once."
+      },
+      {
+        "name": "hover",
+        "value": "transition-colors 0.2s",
+        "purpose": "All interactive state changes are color-only over 200ms."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Removes every entrance animation (Reveal renders a plain div) and forces scroll-behavior auto."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Quiet top bar over a bottom hairline on the warm dark canvas: wordmark left, About/Experience/Projects/Contact anchor links plus a signal Email pill with the FaEnvelope icon; anchors hide below 640px.",
+      "html": "<header class=\"ds-nav\"><nav class=\"ds-nav-inner\"><a class=\"ds-nav-brand\" href=\"#top\">Gustavo Gutierrez</a><div class=\"ds-nav-right\"><ul class=\"ds-nav-links\"><li><a href=\"#experience\">Experience</a></li><li><a href=\"#projects\">Projects</a></li><li><a href=\"#contact\">Contact</a></li></ul><a class=\"ds-nav-cta\" href=\"mailto:gustavoegutierrezg23@gmail.com\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M136.4 525V293.3l-72-65.7L0 191v293a41 41 0 0 0 41 41zm327.2 0h95.5a41 41 0 0 0 40.9-40.9V191l-73 41.8-63.4 60.4zM136.4 293.2l-9.8-90.5 9.8-86.7L300 238.7 463.6 116l11 82-11 95.2L300 416z\"/><path d=\"M463.6 116v177.2L600 191v-54.6a61.4 61.4 0 0 0-98.2-49zM0 191l62.7 47 73.7 55.2V116L98.2 87.3A61.4 61.4 0 0 0 0 136.4z\"/></svg> Email me</a></div></nav></header>",
+      "css": ".ds-nav { border-bottom: 1px solid var(--color-hairline); background: var(--color-paper); } .ds-nav-inner { max-width: 72rem; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 24px; font-family: var(--font-sans); } .ds-nav-brand { font-size: 14px; font-weight: 600; letter-spacing: -0.025em; color: var(--color-ink); text-decoration: none; } .ds-nav-right { display: flex; align-items: center; gap: 24px; } .ds-nav-links { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; } .ds-nav-links a { font-size: 14px; color: var(--color-body); text-decoration: none; transition: color 0.2s; } .ds-nav-links a:hover { color: var(--color-ink); } .ds-nav-cta { display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px; background: var(--color-signal); color: var(--color-ink); font-size: 14px; font-weight: 500; padding: 8px 16px; text-decoration: none; transition: background-color 0.2s; } .ds-nav-cta:hover { background: var(--color-signal-deep); } .ds-nav-cta svg, .ds-nav-cta img { flex-shrink: 0; } .ds-nav-cta:focus-visible, .ds-nav-brand:focus-visible, .ds-nav-links a:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Primary Pill Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The signal pill — the page's one loud control; hover deepens to signal-deep while text stays ink. Leads with the FaEnvelope icon for email actions.",
+      "html": "<a class=\"ds-btn-primary\" href=\"mailto:gustavoegutierrezg23@gmail.com\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M136.4 525V293.3l-72-65.7L0 191v293a41 41 0 0 0 41 41zm327.2 0h95.5a41 41 0 0 0 40.9-40.9V191l-73 41.8-63.4 60.4zM136.4 293.2l-9.8-90.5 9.8-86.7L300 238.7 463.6 116l11 82-11 95.2L300 416z\"/><path d=\"M463.6 116v177.2L600 191v-54.6a61.4 61.4 0 0 0-98.2-49zM0 191l62.7 47 73.7 55.2V116L98.2 87.3A61.4 61.4 0 0 0 0 136.4z\"/></svg> gustavoegutierrezg23@gmail.com</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; border: none; background: var(--color-signal); color: var(--color-ink); font-family: var(--font-sans); font-size: 14px; font-weight: 500; padding: 10px 20px; text-decoration: none; cursor: pointer; transition: background-color 0.2s; } .ds-btn-primary:hover { background: var(--color-signal-deep); } .ds-btn-primary svg, .ds-btn-primary img { flex-shrink: 0; } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Pill Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The secondary pill — hairline stroke on the dark canvas, stroke firms to ink on hover; used for GitHub (FaGithub icon), LinkedIn (FaLinkedin icon), and Download CV (FaDownload icon).",
+      "html": "<a class=\"ds-btn-ghost\" href=\"https://github.com/gustavo2023\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M115.7 288.2H65.2c-1.3 0-2.4 1-2.4 2.4v24.6c0 1.3 1.1 2.4 2.4 2.4h19.7v30.6s-4.4 1.6-16.7 1.6c-14.4 0-34.5-5.3-34.5-49.6s21-50.1 40.6-50.1c17 0 24.4 3 29.1 4.4 1.5.5 2.8-1 2.8-2.3l5.7-23.8q.1-1-1-1.9c-1.8-1.3-13.4-7.8-42.7-7.8C34.6 218.7 0 233 0 301.9s39.6 79.2 72.9 79.2c27.6 0 44.4-11.8 44.4-11.8.6-.4.7-1.3.7-1.8v-77c0-1.2-1-2.3-2.3-2.3m259.9-60.9c0-1.3-1-2.4-2.4-2.4h-28.4a2.3 2.3 0 0 0-2.3 2.4v55h-44.3v-55c0-1.3-1-2.4-2.4-2.4h-28.4a2.3 2.3 0 0 0-2.3 2.4V376c0 1.3 1 2.4 2.3 2.4h28.4c1.3 0 2.4-1 2.4-2.4v-63.6h44.3l-.1 63.6c0 1.3 1 2.4 2.4 2.4h28.4c1.3 0 2.4-1 2.4-2.4zm-206.4 19.9c0-10.2-8.2-18.5-18.3-18.5a18.4 18.4 0 0 0-18.4 18.5c0 10.2 8.3 18.5 18.4 18.5s18.3-8.3 18.3-18.5m-2.3 97.5v-68.6c0-1.3-1-2.4-2.3-2.4h-28.3c-1.3 0-2.5 1.4-2.5 2.7v98.3c0 2.9 1.8 3.7 4.1 3.7h25.5c2.8 0 3.5-1.3 3.5-3.8zm317.3-71H456c-1.3 0-2.4 1-2.4 2.4V349s-7.1 5.2-17.3 5.2-12.9-4.6-12.9-14.5V276c0-1.3-1-2.4-2.3-2.4h-28.6c-1.3 0-2.4 1-2.4 2.4v68.4c0 29.5 16.5 36.8 39.2 36.8a66 66 0 0 0 33.6-10.3s.7 5.4 1 6q.6 1.2 2 1.4l18.3-.1c1.3 0 2.3-1.1 2.3-2.4V276c0-1.3-1-2.4-2.3-2.4m65 80.6a35 35 0 0 1-16.5-4.7v-47.1s6.6-4 14.6-4.8c10.2-.9 20 2.2 20 26.4 0 25.6-4.5 30.6-18.2 30.2m11-83.8a53 53 0 0 0-26.8 7.2v-50.4c0-1.3-1.1-2.4-2.4-2.4h-28.5a2.3 2.3 0 0 0-2.3 2.4V376c0 1.3 1 2.4 2.3 2.4h19.8q1.4 0 2-1.3c.5-.8 1.2-6.8 1.2-6.8s11.7 11 33.8 11c25.9 0 40.7-13.1 40.7-59 0-45.8-23.7-51.8-39.7-51.8m-311.5 3h-21.3v-28.2q0-1.5-1.8-1.6h-29q-1.8 0-1.8 1.6v29l-15.5 3.9q-1.6.6-1.7 2.2v18.3c0 1.3 1 2.4 2.3 2.4h14.9v44c0 32.7 23 35.9 38.4 35.9 7 0 15.5-2.3 16.9-2.8q1.3-.6 1.3-2.1v-20.2q-.2-2.1-2.3-2.3c-1.2 0-4.4.5-7.7.5-10.5 0-14-4.9-14-11.2v-41.8h21.3c1.3 0 2.4-1 2.4-2.4v-22.9q-.2-2.1-2.4-2.3\"/></svg> GitHub</a><a class=\"ds-btn-ghost\" href=\"https://linkedin.com\">LinkedIn <svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M2.5 9.5 9.5 2.5\"/><path d=\"M3.5 2.5h6v6\"/></svg></a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; border: 1px solid var(--color-hairline); background: transparent; color: var(--color-ink); font-family: var(--font-sans); font-size: 14px; font-weight: 500; padding: 10px 20px; text-decoration: none; cursor: pointer; transition: border-color 0.2s; } .ds-btn-ghost:hover { border-color: var(--color-ink); } .ds-btn-ghost svg, .ds-btn-ghost img { flex-shrink: 0; } .ds-btn-ghost:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 3px; }"
+    },
+    {
+      "name": "Inline Link",
+      "kind": "custom",
+      "refersTo": "link-inline",
+      "description": "Ink text with a translucent hairline underline offset 4px and a leading brand icon; text and underline turn signal on hover.",
+      "html": "<a class=\"ds-link-inline\" href=\"https://github.com/gustavo2023/ecommerce-etl-pipeline\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M115.7 288.2H65.2c-1.3 0-2.4 1-2.4 2.4v24.6c0 1.3 1.1 2.4 2.4 2.4h19.7v30.6s-4.4 1.6-16.7 1.6c-14.4 0-34.5-5.3-34.5-49.6s21-50.1 40.6-50.1c17 0 24.4 3 29.1 4.4 1.5.5 2.8-1 2.8-2.3l5.7-23.8q.1-1-1-1.9c-1.8-1.3-13.4-7.8-42.7-7.8C34.6 218.7 0 233 0 301.9s39.6 79.2 72.9 79.2c27.6 0 44.4-11.8 44.4-11.8.6-.4.7-1.3.7-1.8v-77c0-1.2-1-2.3-2.3-2.3m259.9-60.9c0-1.3-1-2.4-2.4-2.4h-28.4a2.3 2.3 0 0 0-2.3 2.4v55h-44.3v-55c0-1.3-1-2.4-2.4-2.4h-28.4a2.3 2.3 0 0 0-2.3 2.4V376c0 1.3 1 2.4 2.3 2.4h28.4c1.3 0 2.4-1 2.4-2.4v-63.6h44.3l-.1 63.6c0 1.3 1 2.4 2.4 2.4h28.4c1.3 0 2.4-1 2.4-2.4zm-206.4 19.9c0-10.2-8.2-18.5-18.3-18.5a18.4 18.4 0 0 0-18.4 18.5c0 10.2 8.3 18.5 18.4 18.5s18.3-8.3 18.3-18.5m-2.3 97.5v-68.6c0-1.3-1-2.4-2.3-2.4h-28.3c-1.3 0-2.5 1.4-2.5 2.7v98.3c0 2.9 1.8 3.7 4.1 3.7h25.5c2.8 0 3.5-1.3 3.5-3.8zm317.3-71H456c-1.3 0-2.4 1-2.4 2.4V349s-7.1 5.2-17.3 5.2-12.9-4.6-12.9-14.5V276c0-1.3-1-2.4-2.3-2.4h-28.6c-1.3 0-2.4 1-2.4 2.4v68.4c0 29.5 16.5 36.8 39.2 36.8a66 66 0 0 0 33.6-10.3s.7 5.4 1 6q.6 1.2 2 1.4l18.3-.1c1.3 0 2.3-1.1 2.3-2.4V276c0-1.3-1-2.4-2.3-2.4m65 80.6a35 35 0 0 1-16.5-4.7v-47.1s6.6-4 14.6-4.8c10.2-.9 20 2.2 20 26.4 0 25.6-4.5 30.6-18.2 30.2m11-83.8a53 53 0 0 0-26.8 7.2v-50.4c0-1.3-1.1-2.4-2.4-2.4h-28.5a2.3 2.3 0 0 0-2.3 2.4V376c0 1.3 1 2.4 2.3 2.4h19.8q1.4 0 2-1.3c.5-.8 1.2-6.8 1.2-6.8s11.7 11 33.8 11c25.9 0 40.7-13.1 40.7-59 0-45.8-23.7-51.8-39.7-51.8m-311.5 3h-21.3v-28.2q0-1.5-1.8-1.6h-29q-1.8 0-1.8 1.6v29l-15.5 3.9q-1.6.6-1.7 2.2v18.3c0 1.3 1 2.4 2.3 2.4h14.9v44c0 32.7 23 35.9 38.4 35.9 7 0 15.5-2.3 16.9-2.8q1.3-.6 1.3-2.1v-20.2q-.2-2.1-2.3-2.3c-1.2 0-4.4.5-7.7.5-10.5 0-14-4.9-14-11.2v-41.8h21.3c1.3 0 2.4-1 2.4-2.4v-22.9q-.2-2.1-2.4-2.3\"/></svg> View on GitHub</a>",
+      "css": ".ds-link-inline { display: inline-flex; align-items: center; gap: 6px; color: var(--color-ink); font-family: var(--font-sans); font-size: 14px; font-weight: 500; text-decoration: underline; text-decoration-color: var(--color-hairline); text-underline-offset: 4px; transition: color 0.2s, text-decoration-color 0.2s; } .ds-link-inline:hover { color: var(--color-signal); text-decoration-color: var(--color-signal); } .ds-link-inline svg, .ds-link-inline img { flex-shrink: 0; } .ds-link-inline:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Email Display Link",
+      "kind": "custom",
+      "description": "The contact section's signature action — signal-text address at reading size, 40% signal underline offset 8px, FaEnvelope icon, inverting to ink on hover.",
+      "html": "<a class=\"ds-link-email\" href=\"mailto:gustavoegutierrezg23@gmail.com\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M136.4 525V293.3l-72-65.7L0 191v293a41 41 0 0 0 41 41zm327.2 0h95.5a41 41 0 0 0 40.9-40.9V191l-73 41.8-63.4 60.4zM136.4 293.2l-9.8-90.5 9.8-86.7L300 238.7 463.6 116l11 82-11 95.2L300 416z\"/><path d=\"M463.6 116v177.2L600 191v-54.6a61.4 61.4 0 0 0-98.2-49zM0 191l62.7 47 73.7 55.2V116L98.2 87.3A61.4 61.4 0 0 0 0 136.4z\"/></svg> gustavoegutierrezg23@gmail.com <svg width=\"20\" height=\"20\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M2.5 9.5 9.5 2.5\"/><path d=\"M3.5 2.5h6v6\"/></svg></a>",
+      "css": ".ds-link-email { display: inline-flex; align-items: center; gap: 12px; color: var(--color-signal-text); font-family: var(--font-sans); font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 500; text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--color-signal) 40%, transparent); text-underline-offset: 8px; transition: color 0.2s, text-decoration-color 0.2s; } .ds-link-email:hover { color: var(--color-ink); text-decoration-color: var(--color-signal); } .ds-link-email svg, .ds-link-email img { flex-shrink: 0; } .ds-link-email:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Featured Core-Stack Chip",
+      "kind": "chip",
+      "refersTo": "chip-featured",
+      "description": "Surface-background pill used only in About for the featured core stack: 22px Simple Icon + technology name in ink.",
+      "html": "<span class=\"ds-chip-featured\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M297.8 1.6c-152.3 0-142.8 66-142.8 66l.2 68.4h145.4v20.6H97.5S0 145.6 0 299.2s85 148.3 85 148.3h50.8v-71.3s-2.7-85.1 83.8-85.1h144.1s81 1.3 81-78.3V81.2S457 1.6 297.8 1.6m-80.1 46a26.1 26.1 0 1 1 0 52.2 26.1 26.1 0 0 1 0-52.2\"/><path d=\"M302.2 598.4c152.3 0 142.8-66 142.8-66l-.2-68.4H299.4v-20.6h203.1s97.5 11 97.5-142.6-85-148.3-85-148.3h-50.8V224s2.7 85-83.8 85H236.3s-81-1.3-81 78.3v131.6s-12.3 79.6 146.9 79.6m80.1-46a26.1 26.1 0 1 1 0-52.2 26.1 26.1 0 0 1 0 52.2\"/></svg> Python</span><span class=\"ds-chip-featured\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M55.4 244.6a55.4 55.4 0 1 0 0 110.8 55.4 55.4 0 0 0 0-110.8m-2.9 99.8v-34.7H33.2L61 255.6v34.7h18.6zm102.5 3.1v-95.7h57.8v11.5h-44.3V292h39.3v11.4h-39.3v44zm90.7-9.2h2l6-.2q3.6-.2 6-.8v-21.4q-1.5-.7-4.6-1.1a43 43 0 0 0-13.7-.2q-3 .5-6 1.8-2.5 1.3-4.3 3.6a9 9 0 0 0-1.8 6q0 6.9 4.4 9.6t12 2.7m-1-64.4q7 0 12.2 1.8l.7.3q5 1.8 8.1 5.1l.4.5q3.4 3.6 4.7 8.7t1.4 11v45l-2.5.4-2.2.4-1.5.2a237 237 0 0 1-21.8 1.7q-6 0-11.2-1.2-5-1.2-8.8-3.9a19 19 0 0 1-5.8-7.2 25 25 0 0 1-2.1-10.6q0-6 2.3-10.2 2.6-4.3 6.7-7 4.1-2.6 9.6-3.8a53 53 0 0 1 19.5-.4l1.2.2q1 0 1.6.3l2 .3.5.2V302a28 28 0 0 0-.7-6.2q-.7-3.2-2.5-5.6-1.8-2.5-5-3.8a18 18 0 0 0-8-1.6q-5.8 0-10.4.9l-2 .4q-3.9.7-5.8 1.5l-1.5-10.6q2.4-1.1 8.2-2 5.3-1.1 11.3-1.2zm65.4 64.4q7.9 0 11.6-2.1a7 7 0 0 0 3.9-6.6q0-4.8-3.7-7.5a59 59 0 0 0-12.3-6.2l-8-3.3a30 30 0 0 1-6.5-4.2 18 18 0 0 1-4.4-5.6 18 18 0 0 1-1.7-8.2q0-9.5 7-15 7-5.7 19.2-5.7 3 0 6.1.4a49 49 0 0 1 9.7 1.7l1.5.4 2.2.7-2.3 11q-2.1-1-6.5-2.2t-10.7-1.2q-5.4 0-9.4 2.2a7 7 0 0 0-4 6.6q0 2.4.9 4.2t2.7 3.3q2 1.4 4.7 2.6t6.7 2.6q5.1 2 9 3.9t6.8 4.3 4.5 6 1.5 8.6a17 17 0 0 1-7.5 15 36 36 0 0 1-21 5.2 55 55 0 0 1-14.3-1.5l-3-.9-5-1.6 2.4-11 1.8.6 5.3 1.8q4.5 1.6 11.9 1.6zm56.8-62.6h27.2v10.8H367v33.1q0 5.4.9 9a14 14 0 0 0 2.4 5.5 9 9 0 0 0 4.2 2.8q2.5.8 5.8.8 5.8 0 9.2-1.2l5-2 2.5 10.7a44 44 0 0 1-30 2 18 18 0 0 1-7.6-5.6 23 23 0 0 1-4.1-9.1q-1-5.6-1.1-12.8v-64l12.8-2.2zm108.3 71.8a506 506 0 0 1-8.7-24.4h-43.3l-8.7 24.4h-14l3.1-8.5 5.2-14 4-10.7 7.5-19.4 8.2-19.8 1-2.3q4.5-10.5 9.6-21h12.2q4.2 8.7 8 17.5l1.6 3.5q4.5 10.5 9 22 4.4 10.5 8.6 22l3.1 8.3 8.3 22.4zM462.7 312a1045 1045 0 0 0-17.8-44.9q-5 10.5-9.3 21.7T427 312zm65.4-61.2q19.6 0 30.4 7.4l.6.4Q570 266 570 281.4q0 8.2-3 14.2-3 5.7-8.6 9.5a39 39 0 0 1-13.6 5.3 90 90 0 0 1-18 1.6H516v35.5h-13.4v-94.3q5.7-1.4 12.6-1.8l11.7-.6zm1.1 11.8h-2.6q-6.7 0-10.5.4v37.6h10.1q6.9 0 12.4-.9t9.3-3 6-6q2-3.6 2-9.5 0-5.1-2-8.6l-.2-.5a15 15 0 0 0-5.8-5.7 24 24 0 0 0-8.4-3q-5-.8-10.3-.8m57.4-10.8H600v95.7h-13.4z\"/></svg> FastAPI</span><span class=\"ds-chip-featured\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M589 368q-.5-1.5-1.4-3-5.3-9.8-25.2-5.7c-41.3 8.5-57.3 3.3-63.1-.5a596 596 0 0 0 76-170.7c6.8-26.3 20-88.1 3-118.3q-1.5-3-3.7-5.9C542.3 22.7 495 .6 437.7 0c-37.3-.4-69.2 8.7-77.9 12q-6.3-1.2-12.9-2-16.2-3-32.7-3.2-44.5-.7-76.3 21c-21.4-8-119.7-41.1-180.5 2-34 24-49.7 67-46.6 127.8 1 20.5 12.6 83.4 31 143.6a463 463 0 0 0 35.8 89.5q20.8 37.4 43 44.8c11 3.7 28.2 3.6 46.4-18.2a1322 1322 0 0 1 48.6-55.2 78 78 0 0 0 34.7 9.5l-6.1 7.7c-8.5 10.7-10.3 13-37.6 18.6-7.7 1.6-28.3 5.8-28.6 20.3q0 4.6 2.3 8.1c5.7 10.6 23 15.3 25.4 15.9 33.3 8.3 62.6 2.3 84.2-17-.4 55.8 2 110.4 8.7 127.2 5.5 13.8 19 47.6 61.7 47.6a99 99 0 0 0 20.8-2.4c44.5-9.5 63.8-29.2 71.3-72.6 3.8-21.8 10-71.9 13.5-102.5q.6-2.7 1.4-3.4s1.8-1.2 10.7.7l1.1.2 6.4.6h.3a154 154 0 0 0 63.3-10.8c16.1-7.5 45.1-25.8 39.9-41.7M59.3 297C40.7 236 29.8 174.7 29 157.5c-2.7-54.3 10.4-92 39-112.3 46-32.5 121-13.5 152.7-3.3l-.2.3c-50.6 51-49.4 138.4-49.3 143.7l.4 9a361 361 0 0 1-1.8 73 92 92 0 0 0 30.6 83.1c-8.7 9.3-27.5 29.8-47.6 54-14.2 17-24 13.8-27.2 12.7-9.8-3.3-20.3-14.7-31-33-12-21-24-50.9-35.3-87.9m150.2 127c-4.3-1-8.2-2.7-10.8-4.3 2.2-1 5.9-2.3 12-3.6 32.1-6.6 37-11.2 47.9-25a212 212 0 0 1 9.2-11q1.2-1.4 1.8-3.3c4.3-3.8 6.8-2.7 11-1 3.8 1.6 7.6 6.5 9.2 11.9.7 2.5 1.5 7.3-1.2 11-22.6 31.7-55.5 31.3-79.1 25.4m52.3-99.6-1.3 3.5c-3.3 9-6.4 17.2-8.3 25a63 63 0 0 1-45.3-20 75 75 0 0 1-19.6-62.5c4.6-32.7 3-61.1 2-76.4l-.3-5.5c7.4-6.6 41.7-25 66-19.4q16.7 3.8 20.8 23.2c14.7 67.6 2 95.8-8.2 118.5q-3.2 6.8-5.8 13.6m184.1 114.3-1.5 14.9-3.7 11q-.4 1.2-.5 2.6a70 70 0 0 1-2.8 21.8c-1.6 5.7-3.4 12.2-4.5 26.4-2.8 35.4-22 55.7-60.4 64-38 8-44.6-12.5-50.6-30.6L320 543c-5.4-14.6-4.8-35.3-4-63.9.5-14-.6-47.5-8.2-66.1l.5-22.3q0-1.6-.4-2.8-.4-2.7-1-5.2a36 36 0 0 0-19.6-23.4c-3.5-1.5-10-4.2-18-2.2a217 217 0 0 1 7.8-23l1.3-3.6q2.3-6 5.3-12.6c10.7-23.7 25.3-56.1 9.5-129.4-6-27.5-25.8-40.9-55.8-37.7a129 129 0 0 0-47.7 15.9c2.3-27.7 11-79.4 43.4-112.1q3.7-3.6 7.6-6.9 2-.4 3.6-1.6a110 110 0 0 1 70-20.8q15.4.2 29.4 2a172 172 0 0 1 101 59.6c20.3 24 31.3 48.3 35.7 61.3q-49.7-5-67 19.5c-24.8 35.5 13.6 104.3 32 137.4a203 203 0 0 1 7.3 13.5c6 14.6 13.8 24.3 19.4 31.4q2.8 3.3 4.7 6.2c-10 2.8-28 9.5-26.3 42.9-.3 3.9-1 11.2-2.1 20.3q-1.6 7.8-2.5 19.2m22.3-40.5c-1-20.8 6.7-23 14.9-25.3l3.4-1q1.5 1.4 3.3 2.6 21.6 14.1 75.2 3.3c-5 4.5-13 10-23.9 15a129 129 0 0 1-43.6 9.1c-18 .9-27.2-2-29.3-3.7m14.2-231.8c-.1 8.8-1.4 16.7-2.6 25-1.4 9-2.8 18.2-3.2 29.4-.4 11 1 22.3 2.3 33.3 2.7 22.2 5.4 45-5.2 67.5a88 88 0 0 1-4.6-9.6 189 189 0 0 0-8.2-15.4c-15.4-27.6-51.4-92.3-33-118.6 9.5-13.6 33.6-14.2 54.5-11.6m5.7 175.3L486 339l-1-1.2c18.2-30 14.7-59.6 11.5-86-1.3-10.7-2.5-21-2.2-30.5.3-10.1 1.7-18.8 3-27.3a172 172 0 0 0 2.8-33.7q.4-2.1.3-4.8c-1.2-12.1-15-48.4-43.3-81.3a195 195 0 0 0-67.2-51c13.1-2.7 30.8-5 50.6-4.6 51.3 1.1 91.9 20.3 120.6 57l1.7 2.5c18 34-7 156.9-74.7 263.5M267.7 188.8c-.6 4.5-7.7 10.6-15.5 10.6l-2-.1a20 20 0 0 1-12.7-8c-1.2-1.4-3-4.4-2.6-7q-.1-1.7 2.3-3.8c3-2.2 8.8-3 15.2-2.1 8 1 16 4.8 15.3 10.4M466 178.5c.2 2-1.3 5-3.9 7.8a18 18 0 0 1-10.2 5.6l-1.8.1c-7.4 0-13.6-5.8-14-9.3-.7-4.4 6.5-7.7 14-8.8 7.4-1 15.2.2 15.9 4.6\"/></svg> PostgreSQL</span>",
+      "css": ".ds-chip-featured { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; background: var(--color-surface); color: var(--color-ink); font-family: var(--font-sans); font-size: 14px; font-weight: 500; padding: 6px 12px; } .ds-chip-featured svg, .ds-chip-featured img { flex-shrink: 0; }"
+    },
+    {
+      "name": "Hero Metadata Row",
+      "kind": "custom",
+      "description": "The mono data row inside the hero text column: location, core stack with inline Simple Icons, and availability in signal-text. No separate fold strip.",
+      "html": "<div class=\"ds-hero-meta\"><span>Margarita, Venezuela</span><span class=\"ds-hero-meta-stack\"><span><svg width=\"18\" height=\"18\" aria-hidden=\"true\"><use href=\"#icon-python\"/></svg> Python</span><span><svg width=\"18\" height=\"18\" aria-hidden=\"true\"><use href=\"#icon-fastapi\"/></svg> FastAPI</span><span><svg width=\"18\" height=\"18\" aria-hidden=\"true\"><use href=\"#icon-postgres\"/></svg> PostgreSQL</span><span><svg width=\"18\" height=\"18\" aria-hidden=\"true\"><use href=\"#icon-docker\"/></svg> Docker</span></span><span class=\"ds-hero-meta-availability\">Open to remote backend / full-stack roles</span></div>",
+      "css": ".ds-hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 13px; font-weight: 400; color: var(--color-mute); } .ds-hero-meta-stack { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 20px; } .ds-hero-meta-stack svg, .ds-hero-meta-stack img { flex-shrink: 0; } .ds-hero-meta-availability { color: var(--color-signal-text); }"
+    },
+    {
+      "name": "Experience Row",
+      "kind": "custom",
+      "description": "The persuasion unit: mono meta column beside a role title and proof lines, each marked by a 4px signal square, over a top hairline.",
+      "html": "<article class=\"ds-exp-row\"><div class=\"ds-exp-meta\"><p>May 2026 – Aug 2026</p><p>Colegio Guayamuri</p></div><div class=\"ds-exp-body\"><h3>Backend Software Engineer (Contract)</h3><ul><li>Streamlined performance reviews for 200+ teachers across 9 core institutional users.</li><li>Secured high-sensitivity evaluation routes with JWT authentication and strict rate-limiting to ensure tamper-proof scoring and data integrity.</li></ul></div></article>",
+      "css": ".ds-exp-row { display: grid; grid-template-columns: 16rem 1fr; gap: 48px; border-top: 1px solid var(--color-hairline); padding: 40px 0; background: var(--color-paper); font-family: var(--font-sans); } .ds-exp-meta { font-family: var(--font-mono); font-size: 13px; color: var(--color-mute); } .ds-exp-meta p { margin: 0; } .ds-exp-meta p + p { margin-top: 8px; } .ds-exp-body h3 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.025em; color: var(--color-ink); } .ds-exp-body ul { margin: 20px 0 0; padding: 0; list-style: none; } .ds-exp-body li { position: relative; max-width: 70ch; padding-left: 20px; font-size: 16px; line-height: 1.625; color: var(--color-body); } .ds-exp-body li + li { margin-top: 12px; } .ds-exp-body li::before { content: \"\"; position: absolute; left: 0; top: 0.65em; width: 4px; height: 4px; background: var(--color-signal); }"
+    },
+    {
+      "name": "Project Row",
+      "kind": "custom",
+      "description": "An editorial project entry — name with mono kind on the baseline, prose, mono stack with inline icons, and a date-plus-repo-link meta column; no card, no thumbnail.",
+      "html": "<article class=\"ds-proj-row\"><div class=\"ds-proj-main\"><div class=\"ds-proj-head\"><h3>E-Commerce ETL Pipeline</h3><p class=\"ds-proj-kind\">Modular Data Ingestion &amp; Transformation Pipeline</p></div><p class=\"ds-proj-copy\">Architected a modular end-to-end ETL pipeline in Python to automatically extract, clean, and structure raw e-commerce product data into standardized schemas for downstream analysis.</p><ul class=\"ds-proj-stack\"><li><svg width=\"14\" height=\"14\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M297.8 1.6c-152.3 0-142.8 66-142.8 66l.2 68.4h145.4v20.6H97.5S0 145.6 0 299.2s85 148.3 85 148.3h50.8v-71.3s-2.7-85.1 83.8-85.1h144.1s81 1.3 81-78.3V81.2S457 1.6 297.8 1.6m-80.1 46a26.1 26.1 0 1 1 0 52.2 26.1 26.1 0 0 1 0-52.2\"/><path d=\"M302.2 598.4c152.3 0 142.8-66 142.8-66l-.2-68.4H299.4v-20.6h203.1s97.5 11 97.5-142.6-85-148.3-85-148.3h-50.8V224s2.7 85-83.8 85H236.3s-81-1.3-81 78.3v131.6s-12.3 79.6 146.9 79.6m80.1-46a26.1 26.1 0 1 1 0-52.2 26.1 26.1 0 0 1 0 52.2\"/></svg> Python</li><li>ETL</li><li>Data Transformation</li><li>Data Pipelines</li></ul></div><div class=\"ds-proj-meta\"><p class=\"ds-proj-date\">July 2026</p><a class=\"ds-proj-link\" href=\"https://github.com/gustavo2023/ecommerce-etl-pipeline\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 600 600\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M115.7 288.2H65.2c-1.3 0-2.4 1-2.4 2.4v24.6c0 1.3 1.1 2.4 2.4 2.4h19.7v30.6s-4.4 1.6-16.7 1.6c-14.4 0-34.5-5.3-34.5-49.6s21-50.1 40.6-50.1c17 0 24.4 3 29.1 4.4 1.5.5 2.8-1 2.8-2.3l5.7-23.8q.1-1-1-1.9c-1.8-1.3-13.4-7.8-42.7-7.8C34.6 218.7 0 233 0 301.9s39.6 79.2 72.9 79.2c27.6 0 44.4-11.8 44.4-11.8.6-.4.7-1.3.7-1.8v-77c0-1.2-1-2.3-2.3-2.3m259.9-60.9c0-1.3-1-2.4-2.4-2.4h-28.4a2.3 2.3 0 0 0-2.3 2.4v55h-44.3v-55c0-1.3-1-2.4-2.4-2.4h-28.4a2.3 2.3 0 0 0-2.3 2.4V376c0 1.3 1 2.4 2.3 2.4h28.4c1.3 0 2.4-1 2.4-2.4v-63.6h44.3l-.1 63.6c0 1.3 1 2.4 2.4 2.4h28.4c1.3 0 2.4-1 2.4-2.4zm-206.4 19.9c0-10.2-8.2-18.5-18.3-18.5a18.4 18.4 0 0 0-18.4 18.5c0 10.2 8.3 18.5 18.4 18.5s18.3-8.3 18.3-18.5m-2.3 97.5v-68.6c0-1.3-1-2.4-2.3-2.4h-28.3c-1.3 0-2.5 1.4-2.5 2.7v98.3c0 2.9 1.8 3.7 4.1 3.7h25.5c2.8 0 3.5-1.3 3.5-3.8zm317.3-71H456c-1.3 0-2.4 1-2.4 2.4V349s-7.1 5.2-17.3 5.2-12.9-4.6-12.9-14.5V276c0-1.3-1-2.4-2.3-2.4h-28.6c-1.3 0-2.4 1-2.4 2.4v68.4c0 29.5 16.5 36.8 39.2 36.8a66 66 0 0 0 33.6-10.3s.7 5.4 1 6q.6 1.2 2 1.4l18.3-.1c1.3 0 2.3-1.1 2.3-2.4V276c0-1.3-1-2.4-2.3-2.4m65 80.6a35 35 0 0 1-16.5-4.7v-47.1s6.6-4 14.6-4.8c10.2-.9 20 2.2 20 26.4 0 25.6-4.5 30.6-18.2 30.2m11-83.8a53 53 0 0 0-26.8 7.2v-50.4c0-1.3-1.1-2.4-2.4-2.4h-28.5a2.3 2.3 0 0 0-2.3 2.4V376c0 1.3 1 2.4 2.3 2.4h19.8q1.4 0 2-1.3c.5-.8 1.2-6.8 1.2-6.8s11.7 11 33.8 11c25.9 0 40.7-13.1 40.7-59 0-45.8-23.7-51.8-39.7-51.8m-311.5 3h-21.3v-28.2q0-1.5-1.8-1.6h-29q-1.8 0-1.8 1.6v29l-15.5 3.9q-1.6.6-1.7 2.2v18.3c0 1.3 1 2.4 2.3 2.4h14.9v44c0 32.7 23 35.9 38.4 35.9 7 0 15.5-2.3 16.9-2.8q1.3-.6 1.3-2.1v-20.2q-.2-2.1-2.3-2.3c-1.2 0-4.4.5-7.7.5-10.5 0-14-4.9-14-11.2v-41.8h21.3c1.3 0 2.4-1 2.4-2.4v-22.9q-.2-2.1-2.4-2.3\"/></svg> View on GitHub</a></div></article>",
+      "css": ".ds-proj-row { display: grid; grid-template-columns: 1fr auto; gap: 48px; border-top: 1px solid var(--color-hairline); padding: 40px 0; background: var(--color-paper); font-family: var(--font-sans); } .ds-proj-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; } .ds-proj-head h3 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.025em; color: var(--color-ink); } .ds-proj-kind { margin: 0; font-family: var(--font-mono); font-size: 13px; color: var(--color-mute); } .ds-proj-copy { margin: 16px 0 0; max-width: 70ch; font-size: 16px; line-height: 1.625; color: var(--color-body); } .ds-proj-stack { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 20px 0 0; padding: 0; list-style: none; font-family: var(--font-mono); font-size: 13px; color: var(--color-mute); } .ds-proj-stack li { display: inline-flex; align-items: center; gap: 6px; } .ds-proj-stack svg, .ds-proj-stack img { flex-shrink: 0; } .ds-proj-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; } .ds-proj-date { margin: 0; font-family: var(--font-mono); font-size: 13px; color: var(--color-mute); } .ds-proj-link { display: inline-flex; align-items: center; gap: 6px; color: var(--color-ink); font-size: 14px; font-weight: 500; text-decoration: underline; text-decoration-color: var(--color-hairline); text-underline-offset: 4px; transition: color 0.2s, text-decoration-color 0.2s; } .ds-proj-link:hover { color: var(--color-signal); text-decoration-color: var(--color-signal); } .ds-proj-link svg, .ds-proj-link img { flex-shrink: 0; } .ds-proj-link:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Hero Portrait Mask",
+      "kind": "custom",
+      "description": "The real portrait fills the right column; .hero-mask blends the left shoulder into the dark canvas with a linear gradient mask and a soft drop-shadow edge.",
+      "html": "<div class=\"ds-hero-portrait\"><img src=\"/assets/hero-image.png\" alt=\"Gustavo Gutierrez portrait\" /></div>",
+      "css": ".ds-hero-portrait { position: relative; min-height: 54vh; background: var(--color-paper); } .ds-hero-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%); filter: drop-shadow(0 0 32px rgba(247, 246, 244, 0.06)); } @media (min-width: 1024px) { .ds-hero-portrait { min-height: 0; } .ds-hero-portrait img { -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 100%); mask-image: linear-gradient(to right, transparent 0%, black 5%, black 100%); } }"
+    },
+    {
+      "name": "Cursor",
+      "kind": "custom",
+      "description": "motion/react custom cursor: fine-pointer only, follows pointer with springs, scales on interactive elements, disabled under reduced motion.",
+      "html": "<div class=\"ds-cursor\" aria-hidden=\"true\"></div>",
+      "css": ".ds-cursor { position: fixed; left: 0; top: 0; width: 14px; height: 14px; border-radius: 9999px; background: rgba(247, 246, 244, 0.9); border: 1.5px solid rgba(247, 246, 244, 0.9); mix-blend-mode: difference; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); } .ds-cursor-hover { width: 48px; height: 48px; background: rgba(255, 77, 0, 0.2); border-color: rgba(255, 77, 0, 0.7); }"
+    },
+    {
+      "name": "MagicPill",
+      "kind": "chip",
+      "description": "Tech-stack pill wrapper that adds a Magic UI-style radial signal-orange glow following the cursor on hover, clipped to the pill shape.",
+      "html": "<span class=\"ds-magic-pill\"><span class=\"ds-magic-pill-glow\"></span>Python</span>",
+      "css": ".ds-magic-pill { position: relative; display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; padding: 6px 12px; overflow: hidden; isolation: isolate; transition: transform 0.2s; } .ds-magic-pill:hover { transform: translateY(-1px); } .ds-magic-pill-glow { position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity 0.3s; pointer-events: none; background: radial-gradient(120px circle at var(--x, -200px) var(--y, -200px), rgba(255, 77, 0, 0.22), rgba(255, 77, 0, 0.06) 50%, transparent 100%); } .ds-magic-pill:hover .ds-magic-pill-glow { opacity: 1; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Warm Night Proof",
+    "overview": "The modern developer portfolio played straight at full craft under a warm night: the person leads, production proof persuades, and nothing performs. The canvas is a deliberate warm dark (#1f1b17) rather than a generic black, so the light ink type feels like reading by lamplight and the signal-orange accent lands as a controlled glow rather than a warning. The first viewport already holds face, name, role, proof, and contact; every scroll stop after is another row of evidence. There are no metric heroes, no icon-card grids, no scroll tricks — the content is the persuasion.\n\nThe material character is quiet and flat: one dark ground, one slightly lighter surface for the rare elevated moment, and 1px translucent hairlines as the only structure. Signal orange exists in the system as a budget — fills for primary pills and hover states, tiny proof markers, text selection, focus rings, and the one readable accent line per screen. Type does the expressive work: expanded, extra-bold Archivo (never above 6rem) declares, plain Archivo explains, and JetBrains Mono is admitted only to read data — dates, stack, locations, URLs, availability — like a caption track for facts.\n\nIconography is intentionally narrow: one icon library, react-icons, mapped through a single DevIcon component. Technology names render with Simple Icons in the hero metadata row, the featured core-stack chips, the full stack list, and project stacks; email, GitHub, LinkedIn, and download links use Font Awesome brand/action glyphs. Motion is one grammar and one ease: elements fade and rise 18–24px on an expo curve, exactly once, staggered by tens of milliseconds; the hero adds a single clip-path opening on the portrait. Under prefers-reduced-motion every entrance disappears, scroll snapping becomes auto, and the page simply is. Confirmed rejections: shadows, gradients, blurs, tonal cards, decorative mono, large raw-orange text on dark, and any template tell that would make a recruiter's scan about the site instead of the person.",
+    "keyCharacteristics": [
+      "Person-led split hero: name at display scale left, real portrait filling the right column with a gradient .hero-mask, key metadata (location, core stack, availability) living directly in the text column.",
+      "Warm dark canvas with structure declared once by 1px translucent hairlines; zero shadows or gradients; the only luminous exception is the portrait's subtle drop-shadow edge.",
+      "One signal-orange accent with a dedicated bright text variant for dark; restraint is the brand.",
+      "Two type voices: expanded Archivo for declaration, JetBrains Mono strictly for data.",
+      "One icon system: react-icons (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through DevIcon; no authored directional glyph.",
+      "Rows, not cards: experience and projects persuade as hairline-divided editorial entries; About uses surface-background chips only for the featured core stack.",
+      "One motion ease (expo), one reveal pattern, fired once; reduced motion is fully honored."
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Signal orange is the only hue beyond the warm neutrals, and it spends like a budget: hover states, tiny markers, selection, focus, and at most one accent text element per screen (the availability line; the email address). Its rarity is the point.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Signal Rule",
+        "body": "Raw signal (#ff4d00) never sets small reading text on dark — it blooms against the canvas. Text that must be orange on dark uses signal-text (#ff7a33); raw signal is for fills, markers, rings, and hover moments.",
+        "section": "colors"
+      },
+      {
+        "name": "The Data-Only Mono Rule",
+        "body": "JetBrains Mono exists to set data: dates, stack, locations, URLs, availability. It never sets prose, headings, buttons, or decoration. Mono is evidence, never costume.",
+        "section": "typography"
+      },
+      {
+        "name": "The Six-Rem Ceiling",
+        "body": "The display voice never exceeds 6rem; the shipped maximum is 5.5rem. Past that the expanded grotesque stops declaring and starts shouting.",
+        "section": "typography"
+      },
+      {
+        "name": "The Declared-Once Rule",
+        "body": "Every separation is one 1px hairline, declared once. If two elements need more distinction, adjust space or type — never add a second border, a shadow, or a fill.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Pill-or-Square Rule",
+        "body": "Radius exists on interactive pills and the 2px focus outline, nowhere else. Images, rows, and containers never round; if it isn't a button, it's a rectangle.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do set display type in expanded Archivo (wdth 125, 800 weight, -0.02em tracking, 0.98 line-height) and keep it under 6rem.",
+      "Do reserve JetBrains Mono (.data, 13px) for data: dates, stack lists, locations, URLs, availability, footer lines.",
+      "Do set small signal text on dark in signal-text (#ff7a33); keep raw signal (#ff4d00) for fills, markers, selection, focus rings, and hover states.",
+      "Do keep the ground warm dark canvas (#1f1b17) and use surface (#2a2622) as the only elevated surface for featured chips or future panels.",
+      "Do separate with single 1px translucent hairlines (rgba(247, 246, 244, 0.12)) and let whitespace do the rest: 80→112px section rhythm, 40px row rhythm, 48px under headings.",
+      "Do keep buttons as signal or ghost pills with 200ms color transitions.",
+      "Do use react-icons (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through DevIcon; render them inline at 18–22px in their label color, never as standalone decoration.",
+      "Do use react-icons (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through DevIcon; render them inline at 18–22px in their label color, never as standalone decoration.",
+      "Do animate on the one expo ease (0.16, 1, 0.3, 1), rising 18–24px, once per element, and honor prefers-reduced-motion.",
+      "Do show the real portrait large with .hero-mask — the person leads the page.",
+      "Do link the Download CV button to /assets/cv.pdf; add the PDF at that path so the download works."
+    ],
+    "donts": [
+      "Don't add shadows, gradients, blurs, or tonal cards — separation is one hairline, declared once. (The portrait's .hero-mask drop-shadow is the lone image-edge exception, not a general elevation token.)",
+      "Don't introduce arbitrary icon sets, emoji, client logos, or decorative glyphs; the only admitted icons are react-icons (Simple Icons + Font Awesome) mapped through DevIcon.",
+      "Don't set prose, headings, or decoration in mono; mono is data, not costume.",
+      "Don't fill backgrounds with raw signal or set small text in raw signal on dark; the accent stays rare and readable.",
+      "Don't build icon-card grids, metric heroes, tag chips, or gimmick scroll effects — the template tells this system refuses.",
+      "Don't round containers, images, or rows; radius belongs to pills (9999px) and the 2px focus ring only.",
+      "Don't invent a second accent, a light section, or a third typeface; one canvas, one ink, one orange, two voices."
+    ]
+  }
+}
