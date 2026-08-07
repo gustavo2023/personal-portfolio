@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { person, links, cv } from "../data/content.js";
 import DevIcon, {
@@ -20,6 +21,14 @@ function HeroTech({ name }) {
 
 export default function Hero() {
   const reduce = useReducedMotion();
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(links.email.url.replace("mailto:", ""));
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const rise = (delay) =>
     reduce
@@ -71,10 +80,11 @@ export default function Hero() {
           >
             <a
               href={links.email.url}
+              onClick={handleEmailClick}
               className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:bg-signal-deep"
             >
               <EmailIcon size={18} />
-              {links.email.label}
+              <span className="email-text">{copied ? "Copied!" : links.email.label}</span>
             </a>
             <a
               href={cv.url}

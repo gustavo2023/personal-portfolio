@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { links, cv } from "../data/content.js";
 import Reveal from "./Reveal.jsx";
 import {
@@ -8,6 +9,16 @@ import {
 } from "./DevIcon.jsx";
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    const email = links.email.url.replace("mailto:", "");
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section id="contact" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-32">
@@ -20,10 +31,11 @@ export default function Contact() {
         <Reveal delay={0.08}>
           <a
             href={links.email.url}
+            onClick={handleEmailClick}
             className="mt-10 inline-flex items-center gap-3 text-xl font-medium text-signal-text underline decoration-signal/40 underline-offset-8 transition-colors duration-200 hover:text-ink hover:decoration-signal md:text-2xl"
           >
             <EmailIcon size={28} />
-            {links.email.label}
+            {copied ? "Copied to clipboard!" : links.email.label}
           </a>
         </Reveal>
 
