@@ -35,11 +35,11 @@ export default function About() {
       aria-labelledby="about-heading"
       className="border-b border-hairline"
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
         <Reveal>
           <h2
             id="about-heading"
-            className="display text-[clamp(2rem,4vw,3rem)]"
+            className="display text-[clamp(2.5rem,5vw,4rem)]"
           >
             <SplitText text={nav.about} delay={0} />
           </h2>
@@ -47,13 +47,19 @@ export default function About() {
 
         <div>
           <Reveal delay={0.08}>
-            <p className="max-w-[68ch] text-base leading-relaxed text-body">
-              {about.bio}
-            </p>
+            <div className="relative pl-6">
+              <span
+                aria-hidden="true"
+                className="absolute left-0 top-[0.65em] h-1 w-1 bg-signal"
+              />
+              <p className="max-w-[48ch] text-[clamp(1.125rem,2vw,1.5rem)] font-medium leading-relaxed tracking-tight text-ink">
+                {about.bio}
+              </p>
+            </div>
           </Reveal>
 
           <Reveal delay={0.16}>
-            <div className="mt-8 flex max-w-[68ch] flex-wrap items-center gap-3">
+            <div className="mt-12 flex max-w-[68ch] flex-wrap items-center gap-3">
               {core.map((item) => (
                 <TechChip key={item} name={item} featured />
               ))}

@@ -17,7 +17,7 @@ export default function Experience() {
         <Reveal>
           <h2
             id="experience-heading"
-            className="display text-[clamp(2rem,4vw,3rem)]"
+            className="display text-[clamp(2.5rem,5vw,4rem)]"
           >
             <SplitText text={nav.experience} delay={0} />
           </h2>
@@ -33,7 +33,7 @@ export default function Experience() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold tracking-tight text-ink">
+                  <h3 className="text-2xl font-semibold tracking-tight text-ink">
                     {job.role}
                   </h3>
                   <ul className="mt-5 space-y-3">

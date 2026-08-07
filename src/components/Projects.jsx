@@ -21,7 +21,7 @@ export default function Projects() {
         <Reveal>
           <h2
             id="projects-heading"
-            className="display text-[clamp(2rem,4vw,3rem)]"
+            className="display text-[clamp(2.5rem,5vw,4rem)]"
           >
             <SplitText text={nav.projects} delay={0} />
           </h2>
@@ -33,7 +33,7 @@ export default function Projects() {
               <article className="grid grid-cols-1 gap-6 border-t border-hairline py-10 lg:grid-cols-[1fr_auto] lg:gap-12">
                 <div>
                   <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                    <h3 className="text-xl font-semibold tracking-tight text-ink">
+                    <h3 className="text-2xl font-semibold tracking-tight text-ink">
                       {project.name}
                     </h3>
                     <p className="data text-mute">{project.kind}</p>
@@ -42,7 +42,7 @@ export default function Projects() {
                   <p className="mt-4 max-w-[70ch] text-base leading-relaxed text-body">
                     {project.overview}
                   </p>
-                  <p className="mt-3 max-w-[70ch] text-base leading-relaxed text-body">
+                  <p className="mt-4 max-w-[70ch] text-base leading-relaxed text-body">
                     {project.engineering}
                   </p>
 
