@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { person, links, cv } from "../data/content.js";
+import { useTranslation } from "react-i18next";
 import DevIcon, {
   GithubIcon,
   LinkedinIcon,
@@ -23,6 +23,11 @@ function HeroTech({ name }) {
 }
 
 export default function Hero() {
+  const { t } = useTranslation();
+  const person = t("person", { returnObjects: true });
+  const links = t("links", { returnObjects: true });
+  const cv = t("cv", { returnObjects: true });
+  const ui = t("ui", { returnObjects: true });
   const reduce = useReducedMotion();
   const [copied, setCopied] = useState(false);
 
@@ -84,7 +89,9 @@ export default function Hero() {
             >
               <EmailIcon size={18} />
               <span className="email-text">
-                <HoverDecode text={copied ? "Copied!" : links.email.label} />
+                <HoverDecode
+                  text={copied ? ui.copied || "Copied!" : links.email.label}
+                />
               </span>
             </button>
             <a
@@ -102,7 +109,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
             >
               <GithubIcon size={18} />
-              <HoverDecode text="GitHub" />
+              <HoverDecode text={ui.github} />
             </a>
             <a
               href={links.linkedin.url}
@@ -111,7 +118,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
             >
               <LinkedinIcon size={18} />
-              <HoverDecode text="LinkedIn" />
+              <HoverDecode text={ui.linkedin} />
             </a>
           </motion.div>
 

@@ -1,8 +1,12 @@
-import { experience } from "../data/content.js";
+import { useTranslation } from "react-i18next";
 import Reveal from "./Reveal.jsx";
 import SplitText from "./SplitText.jsx";
 
 export default function Experience() {
+  const { t } = useTranslation();
+  const experience = t("experience", { returnObjects: true });
+  const nav = t("nav", { returnObjects: true });
+
   return (
     <section
       id="experience"
@@ -15,7 +19,7 @@ export default function Experience() {
             id="experience-heading"
             className="display text-[clamp(2rem,4vw,3rem)]"
           >
-            <SplitText text="Experience" delay={0} />
+            <SplitText text={nav.experience} delay={0} />
           </h2>
         </Reveal>
 

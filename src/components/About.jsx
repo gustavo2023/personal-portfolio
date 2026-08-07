@@ -1,4 +1,4 @@
-import { about } from "../data/content.js";
+import { useTranslation } from "react-i18next";
 import Reveal from "./Reveal.jsx";
 import DevIcon from "./DevIcon.jsx";
 import MagicPill from "./MagicPill.jsx";
@@ -22,6 +22,10 @@ function TechChip({ name, featured = false }) {
 }
 
 export default function About() {
+  const { t } = useTranslation();
+  const about = t("about", { returnObjects: true });
+  const nav = t("nav", { returnObjects: true });
+
   const core = about.stack.filter((s) => CORE_STACK.includes(s));
   const rest = about.stack.filter((s) => !CORE_STACK.includes(s));
 
@@ -37,7 +41,7 @@ export default function About() {
             id="about-heading"
             className="display text-[clamp(2rem,4vw,3rem)]"
           >
-            <SplitText text="About" delay={0} />
+            <SplitText text={nav.about} delay={0} />
           </h2>
         </Reveal>
 

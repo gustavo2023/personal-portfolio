@@ -1,4 +1,4 @@
-import { projects } from "../data/content.js";
+import { useTranslation } from "react-i18next";
 import Reveal from "./Reveal.jsx";
 import DevIcon from "./DevIcon.jsx";
 import { GithubIcon } from "./DevIcon.jsx";
@@ -6,6 +6,11 @@ import SplitText from "./SplitText.jsx";
 import HoverDecode from "./HoverDecode.jsx";
 
 export default function Projects() {
+  const { t } = useTranslation();
+  const projects = t("projects", { returnObjects: true });
+  const nav = t("nav", { returnObjects: true });
+  const ui = t("ui", { returnObjects: true });
+
   return (
     <section
       id="projects"
@@ -18,7 +23,7 @@ export default function Projects() {
             id="projects-heading"
             className="display text-[clamp(2rem,4vw,3rem)]"
           >
-            <SplitText text="Projects" delay={0} />
+            <SplitText text={nav.projects} delay={0} />
           </h2>
         </Reveal>
 
@@ -63,7 +68,7 @@ export default function Projects() {
                     className="inline-flex items-center gap-1.5 p-3 -m-3 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
                   >
                     <GithubIcon size={18} />
-                    <HoverDecode text="View on GitHub" />
+                    <HoverDecode text={ui.viewOnGithub} />
                   </a>
                 </div>
               </article>

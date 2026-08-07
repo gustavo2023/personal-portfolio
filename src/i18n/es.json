@@ -1,0 +1,134 @@
+{
+  "person": {
+    "name": "Gustavo Gutierrez",
+    "firstName": "Gustavo",
+    "lastName": "Gutierrez",
+    "role": "Desarrollador de Software",
+    "focus": "Ingeniería Backend",
+    "location": "Margarita, Venezuela",
+    "photo": "/assets/hero-image.png",
+    "photoAlt": "Retrato de Gustavo Gutierrez",
+    "tagline": "Construyo los sistemas backend sobre los cuales operan las instituciones: APIs seguras, canales de datos y los despliegues detrás de ellos.",
+    "availability": "Disponible para roles remotos de backend / full-stack"
+  },
+  "about": {
+    "bio": "Soy un Desarrollador de Software especializado en construir arquitecturas backend robustas y seguras, pipelines de datos de extremo a extremo, y APIs REST escalables usando Python, FastAPI y PostgreSQL. Con experiencia en contenerización y despliegues en la nube, me enfoco en automatizar flujos de trabajo y entregar aplicaciones listas para producción que resuelven cuellos de botella operativos en el mundo real.",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "HTML/CSS",
+      "FastAPI",
+      "React.js",
+      "PostgreSQL",
+      "Docker",
+      "Docker Compose",
+      "AWS (S3)",
+      "Git"
+    ]
+  },
+  "links": {
+    "github": {
+      "label": "github.com/gustavo2023",
+      "url": "https://github.com/gustavo2023"
+    },
+    "linkedin": {
+      "label": "linkedin.com/in/gustavo-gutierrez-dev",
+      "url": "https://www.linkedin.com/in/gustavo-gutierrez-dev/"
+    },
+    "email": {
+      "label": "gustavoegutierrezg23@gmail.com",
+      "url": "mailto:gustavoegutierrezg23@gmail.com"
+    }
+  },
+  "experience": [
+    {
+      "id": "guayamuri-contract",
+      "role": "Ingeniero de Software Backend (Contrato)",
+      "company": "Colegio Guayamuri",
+      "period": "Mayo 2026 – Presente",
+      "proof": [
+        "Diseñé y desarrollé el backend y la infraestructura DevOps para una plataforma centralizada de evaluación de profesores usando Python, FastAPI, PostgreSQL y TypeScript/React.",
+        "Agilicé las revisiones de desempeño para más de 200 profesores a través de 9 usuarios institucionales principales.",
+        "Construí endpoints analíticos personalizados que generan reportes descargables en PDF y Excel para directores institucionales y evaluadores de departamento.",
+        "Aseguré las rutas de evaluación de alta sensibilidad con autenticación JWT y limitación de tasa estricta para garantizar una puntuación a prueba de manipulaciones e integridad de los datos.",
+        "Contenericé los servicios usando Docker Compose y gestioné los despliegues de producción en la nube en Railway."
+      ]
+    },
+    {
+      "id": "guayamuri-intern",
+      "role": "Pasante de Ingeniería de Software",
+      "company": "Colegio Guayamuri",
+      "period": "Ene 2026 – Abr 2026",
+      "proof": [
+        "Diseñé y desplegué una plataforma de admisiones API REST full-stack usando Python, FastAPI, React.js y PostgreSQL.",
+        "Reemplacé un flujo de trabajo manual en hojas de cálculo, aumentando la capacidad de procesamiento de solicitudes de 150 a 200 aspirantes anuales en 4 meses.",
+        "Implementé control de acceso basado en roles (RBAC) y autenticación JWT para 8 miembros del personal administrativo mientras integraba notificaciones automáticas por correo electrónico para entrevistas.",
+        "Configuré el alojamiento en la nube de producción en Railway y buckets AWS S3 para cargas de documentos y copias de seguridad automáticas de la base de datos SQL.",
+        "Diseñé limitación de tasa de endpoints en formularios de solicitud públicos y rutas de autenticación para prevenir el abuso."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "ecommerce-etl-pipeline",
+      "name": "Pipeline ETL de E-Commerce",
+      "kind": "Pipeline Modular de Ingestión y Transformación de Datos",
+      "date": "Julio 2026",
+      "overview": "Diseñé un pipeline ETL modular de extremo a extremo en Python para extraer, limpiar y estructurar automáticamente datos de productos de e-commerce en esquemas estandarizados para análisis posterior.",
+      "engineering": "Diseñé scripts automatizados de transformación de datos con un manejo robusto de errores y validación de datos para analizar de manera confiable atributos complejos de productos y metadatos de precios.",
+      "stack": [
+        "Python",
+        "ETL",
+        "Transformación de Datos",
+        "Pipelines de Datos"
+      ],
+      "url": "https://github.com/gustavo2023/ecommerce-etl-pipeline"
+    },
+    {
+      "slug": "static-site-generator",
+      "name": "Generador de Sitios Estáticos",
+      "kind": "Herramienta de Compilación de Markdown a HTML Orientada a Objetos",
+      "date": "Junio 2026",
+      "overview": "Construí un generador de sitios estáticos personalizado de Markdown a HTML desde cero en Python, aprovechando los principios de programación orientada a objetos (POO) para analizar sintaxis en una estructura de árbol HTML.",
+      "engineering": "Implementé algoritmos de recorrido recursivo de árboles de directorios para procesar dinámicamente carpetas de origen jerárquicas y documentos Markdown en páginas HTML listas para producción.",
+      "stack": ["Python", "POO", "Algoritmos", "Análisis de Markdown/HTML"],
+      "url": "https://github.com/gustavo2023/static-site-generator"
+    }
+  ],
+  "cv": {
+    "label": "Descargar CV",
+    "url": "/assets/cv.pdf"
+  },
+  "nav": {
+    "about": "Acerca",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "emailMe": "Envíame un correo"
+  },
+  "contact": {
+    "title": "¿Tienes un backend que vale la pena construir? Hablemos.",
+    "namePlaceholder": "Tu Nombre",
+    "emailPlaceholder": "Tu Correo",
+    "messagePlaceholder": "Tu Mensaje",
+    "sendMessage": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "Mensaje enviado exitosamente.",
+    "fail": "Fallo al enviar el mensaje.",
+    "networkError": "Error de red. Por favor intenta de nuevo.",
+    "nameRequired": "El nombre es requerido",
+    "emailRequired": "El correo es requerido",
+    "emailInvalid": "Formato de correo inválido",
+    "messageRequired": "El mensaje es requerido",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo electrónico",
+    "messageLabel": "Mensaje"
+  },
+  "ui": {
+    "viewOnGithub": "Ver en GitHub",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
