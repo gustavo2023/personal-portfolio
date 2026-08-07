@@ -5,7 +5,8 @@ const CHARS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':\",./<>?";
 
 function HoverChar({ realChar, isHovered, decodeOnMount }) {
-  const [scrambledChar, setScrambledChar] = useState(realChar);
+  const spanRef = useRef(null);
+  const [isDecoded, setIsDecoded] = useState(!decodeOnMount && !isHovered);
   const hasMounted = useRef(false);
 
   useEffect(() => {
@@ -18,16 +19,22 @@ function HoverChar({ realChar, isHovered, decodeOnMount }) {
       hasMounted.current = true;
     }
 
+    setIsDecoded(false);
+
     let iterations = 0;
     // Each character gets a random decode length for a staggered organic feel
     const maxIterations = 3 + Math.floor(Math.random() * 8);
 
     const intervalId = setInterval(() => {
       if (iterations >= maxIterations) {
-        setScrambledChar(realChar);
+        if (spanRef.current) spanRef.current.textContent = realChar;
+        setIsDecoded(true);
         clearInterval(intervalId);
       } else {
-        setScrambledChar(CHARS[Math.floor(Math.random() * CHARS.length)]);
+        if (spanRef.current) {
+          spanRef.current.textContent =
+            CHARS[Math.floor(Math.random() * CHARS.length)];
+        }
         iterations++;
       }
     }, 30); // Very fast flicker
@@ -38,18 +45,18 @@ function HoverChar({ realChar, isHovered, decodeOnMount }) {
   if (realChar === " ") return <span>&nbsp;</span>;
 
   // Show scrambled char if we are hovering or actively scrambling
-  const isAnimating = isHovered || scrambledChar !== realChar;
-  const displayChar = isAnimating ? scrambledChar : realChar;
+  const isAnimating = isHovered || !isDecoded;
 
   return (
     <span className="relative inline-flex items-center justify-center">
       <span className="invisible">{realChar}</span>
       <span
+        ref={spanRef}
         className={`absolute inset-0 flex items-center justify-center transition-colors duration-100 ${
-          displayChar !== realChar ? "text-signal" : ""
+          isAnimating ? "text-signal" : ""
         }`}
       >
-        {displayChar}
+        {!isAnimating ? realChar : ""}
       </span>
     </span>
   );

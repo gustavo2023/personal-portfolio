@@ -5,7 +5,7 @@ const CHARS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':\",./<>?";
 
 function DecodeChar({ realChar, delay, isInView }) {
-  const [char, setChar] = useState("");
+  const spanRef = useRef(null);
   const [isDecoded, setIsDecoded] = useState(false);
 
   useEffect(() => {
@@ -21,11 +21,14 @@ function DecodeChar({ realChar, delay, isInView }) {
 
       intervalId = setInterval(() => {
         if (iterations >= maxIterations) {
-          setChar(realChar);
+          if (spanRef.current) spanRef.current.textContent = realChar;
           setIsDecoded(true);
           clearInterval(intervalId);
         } else {
-          setChar(CHARS[Math.floor(Math.random() * CHARS.length)]);
+          if (spanRef.current) {
+            spanRef.current.textContent =
+              CHARS[Math.floor(Math.random() * CHARS.length)];
+          }
           iterations++;
         }
       }, 40); // 40ms per frame = very fast decode
@@ -47,12 +50,11 @@ function DecodeChar({ realChar, delay, isInView }) {
       <span className="invisible">{realChar}</span>
       {/* Absolute positioned active character */}
       <span
+        ref={spanRef}
         className={`absolute inset-0 flex items-center justify-center transition-colors duration-200 ${
           isDecoded ? "" : "text-signal"
         }`}
-      >
-        {char}
-      </span>
+      ></span>
     </span>
   );
 }
