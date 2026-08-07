@@ -6,8 +6,10 @@ import DevIcon, {
   LinkedinIcon,
   EmailIcon,
   DownloadIcon,
+  LocationIcon,
 } from "./DevIcon.jsx";
 import SplitText from "./SplitText.jsx";
+import HoverDecode from "./HoverDecode.jsx";
 
 const EASE = [0.16, 1, 0.3, 1];
 
@@ -82,7 +84,7 @@ export default function Hero() {
             >
               <EmailIcon size={18} />
               <span className="email-text">
-                {copied ? "Copied!" : links.email.label}
+                <HoverDecode text={copied ? "Copied!" : links.email.label} />
               </span>
             </button>
             <a
@@ -91,7 +93,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
             >
               <DownloadIcon size={18} />
-              {cv.label}
+              <HoverDecode text={cv.label} />
             </a>
             <a
               href={links.github.url}
@@ -100,7 +102,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
             >
               <GithubIcon size={18} />
-              GitHub
+              <HoverDecode text="GitHub" />
             </a>
             <a
               href={links.linkedin.url}
@@ -109,23 +111,24 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
             >
               <LinkedinIcon size={18} />
-              LinkedIn
+              <HoverDecode text="LinkedIn" />
             </a>
           </motion.div>
 
           <motion.div
             {...rise(0.32)}
-            className="mt-8 flex max-w-[52ch] flex-col flex-wrap gap-3 data text-mute sm:flex-row sm:items-center"
+            className="mt-8 flex max-w-[52ch] flex-col flex-wrap gap-4 data text-mute sm:flex-row sm:items-center sm:gap-6"
           >
-            <span>{person.location}</span>
-            <span className="hidden h-3 w-px bg-hairline sm:inline-block" />
+            <span className="inline-flex items-center gap-1.5">
+              <LocationIcon size={16} />
+              {person.location}
+            </span>
             <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
               <HeroTech name="Python" />
               <HeroTech name="FastAPI" />
               <HeroTech name="PostgreSQL" />
               <HeroTech name="Docker" />
             </span>
-            <span className="hidden h-3 w-px bg-hairline sm:inline-block" />
             <span className="text-signal-text">{person.availability}</span>
           </motion.div>
         </div>

@@ -2,6 +2,7 @@ import { about } from "../data/content.js";
 import Reveal from "./Reveal.jsx";
 import DevIcon from "./DevIcon.jsx";
 import MagicPill from "./MagicPill.jsx";
+import SplitText from "./SplitText.jsx";
 
 const CORE_STACK = ["Python", "FastAPI", "PostgreSQL"];
 
@@ -36,7 +37,7 @@ export default function About() {
             id="about-heading"
             className="display text-[clamp(2rem,4vw,3rem)]"
           >
-            About
+            <SplitText text="About" delay={0} />
           </h2>
         </Reveal>
 

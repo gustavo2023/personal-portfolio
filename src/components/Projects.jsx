@@ -2,6 +2,8 @@ import { projects } from "../data/content.js";
 import Reveal from "./Reveal.jsx";
 import DevIcon from "./DevIcon.jsx";
 import { GithubIcon } from "./DevIcon.jsx";
+import SplitText from "./SplitText.jsx";
+import HoverDecode from "./HoverDecode.jsx";
 
 export default function Projects() {
   return (
@@ -16,7 +18,7 @@ export default function Projects() {
             id="projects-heading"
             className="display text-[clamp(2rem,4vw,3rem)]"
           >
-            Projects
+            <SplitText text="Projects" delay={0} />
           </h2>
         </Reveal>
 
@@ -61,7 +63,7 @@ export default function Projects() {
                     className="inline-flex items-center gap-1.5 p-3 -m-3 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
                   >
                     <GithubIcon size={18} />
-                    View on GitHub
+                    <HoverDecode text="View on GitHub" />
                   </a>
                 </div>
               </article>

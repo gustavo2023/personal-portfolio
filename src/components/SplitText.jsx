@@ -1,44 +1,95 @@
-import { motion, useReducedMotion } from "motion/react";
+import { useState, useEffect, useRef } from "react";
+import { useInView, useReducedMotion } from "motion/react";
 
-const EASE = [0.16, 1, 0.3, 1];
+const CHARS =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':\",./<>?";
 
-export default function SplitText({ text, className = "", delay = 0, stagger = 0.03 }) {
+function DecodeChar({ realChar, delay, isInView }) {
+  const [char, setChar] = useState("");
+  const [isDecoded, setIsDecoded] = useState(false);
+
+  useEffect(() => {
+    if (!isInView || realChar === " ") return;
+
+    let timeoutId;
+    let intervalId;
+
+    // Start decoding after delay
+    timeoutId = setTimeout(() => {
+      let iterations = 0;
+      const maxIterations = 8; // fast, sharp flicker
+
+      intervalId = setInterval(() => {
+        if (iterations >= maxIterations) {
+          setChar(realChar);
+          setIsDecoded(true);
+          clearInterval(intervalId);
+        } else {
+          setChar(CHARS[Math.floor(Math.random() * CHARS.length)]);
+          iterations++;
+        }
+      }, 40); // 40ms per frame = very fast decode
+    }, delay * 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+      clearInterval(intervalId);
+    };
+  }, [isInView, realChar, delay]);
+
+  if (realChar === " ") {
+    return <span className="w-[0.3em]">&nbsp;</span>;
+  }
+
+  return (
+    <span className="relative inline-flex items-center justify-center">
+      {/* Invisible real character to hold exact width and prevent jitter */}
+      <span className="invisible">{realChar}</span>
+      {/* Absolute positioned active character */}
+      <span
+        className={`absolute inset-0 flex items-center justify-center transition-colors duration-200 ${
+          isDecoded ? "" : "text-signal"
+        }`}
+      >
+        {char}
+      </span>
+    </span>
+  );
+}
+
+export default function SplitText({
+  text,
+  className = "",
+  delay = 0,
+  stagger = 0.03,
+}) {
   const reduce = useReducedMotion();
-  
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-64px" });
+
   if (reduce) {
     return <span className={className}>{text}</span>;
   }
 
-  // Split into words first to handle wrapping correctly, then letters
   const words = text.split(" ");
-  
   let letterIndex = 0;
-  
+
   return (
-    <span className={`inline-flex flex-wrap ${className}`}>
+    <span ref={ref} className={`inline-flex flex-wrap ${className}`}>
       {words.map((word, wordIdx) => (
         <span key={wordIdx} className="inline-flex whitespace-pre">
           {word.split("").map((char) => {
-            const currentDelay = delay + (letterIndex * stagger);
+            const currentDelay = delay + letterIndex * stagger;
             letterIndex++;
             return (
-              <motion.span
+              <DecodeChar
                 key={letterIndex}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-64px" }}
-                transition={{
-                  duration: 0.9,
-                  ease: EASE,
-                  delay: currentDelay,
-                }}
-                className="inline-block"
-              >
-                {char}
-              </motion.span>
+                realChar={char}
+                delay={currentDelay}
+                isInView={isInView}
+              />
             );
           })}
-          {/* Add space after word unless it's the last word */}
           {wordIdx < words.length - 1 && (
             <span className="w-[0.3em]">&nbsp;</span>
           )}

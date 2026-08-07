@@ -53,7 +53,7 @@ export const experience = [
     id: "guayamuri-contract",
     role: "Backend Software Engineer (Contract)",
     company: "Colegio Guayamuri",
-    period: "May 2026 – Aug 2026",
+    period: "May 2026 – Present",
     proof: [
       "Designed and developed the backend and DevOps infrastructure for a centralized faculty evaluation platform using Python, FastAPI, PostgreSQL, and TypeScript/React.",
       "Streamlined performance reviews for 200+ teachers across 9 core institutional users.",

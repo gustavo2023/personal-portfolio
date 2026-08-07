@@ -18,6 +18,7 @@ import {
   FaEnvelope,
   FaDownload,
   FaDatabase,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
 const techIcons = {
@@ -66,3 +67,4 @@ export const GithubIcon = FaGithub;
 export const LinkedinIcon = FaLinkedin;
 export const EmailIcon = FaEnvelope;
 export const DownloadIcon = FaDownload;
+export const LocationIcon = FaMapMarkerAlt;

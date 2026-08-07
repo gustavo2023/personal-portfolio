@@ -1,5 +1,6 @@
 import { experience } from "../data/content.js";
 import Reveal from "./Reveal.jsx";
+import SplitText from "./SplitText.jsx";
 
 export default function Experience() {
   return (
@@ -14,7 +15,7 @@ export default function Experience() {
             id="experience-heading"
             className="display text-[clamp(2rem,4vw,3rem)]"
           >
-            Experience
+            <SplitText text="Experience" delay={0} />
           </h2>
         </Reveal>
 

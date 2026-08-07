@@ -3,6 +3,7 @@ import { links, cv } from "../data/content.js";
 import Reveal from "./Reveal.jsx";
 import SplitText from "./SplitText.jsx";
 import { GithubIcon, LinkedinIcon, DownloadIcon } from "./DevIcon.jsx";
+import HoverDecode from "./HoverDecode.jsx";
 
 export default function Contact() {
   const [result, setResult] = useState("");
@@ -46,7 +47,10 @@ export default function Contact() {
           id="contact-heading"
           className="display max-w-[16ch] text-[clamp(2rem,5.5vw,4.5rem)]"
         >
-          <SplitText text="Have a backend worth building? Let's talk." delay={0} />
+          <SplitText
+            text="Have a backend worth building? Let's talk."
+            delay={0}
+          />
         </h2>
 
         <Reveal delay={0.08}>
@@ -81,7 +85,7 @@ export default function Contact() {
                 type="submit"
                 className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-medium text-ink transition-colors duration-200 hover:bg-signal-deep"
               >
-                Send Message
+                <HoverDecode text="Send Message" />
               </button>
               {result && (
                 <span className="text-sm font-medium text-signal-text">
@@ -102,7 +106,7 @@ export default function Contact() {
                 className="inline-flex items-center gap-1.5 p-3 -m-3 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
               >
                 <GithubIcon size={18} />
-                GitHub
+                <HoverDecode text="GitHub" />
               </a>
             </li>
             <li>
@@ -113,7 +117,7 @@ export default function Contact() {
                 className="inline-flex items-center gap-1.5 p-3 -m-3 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
               >
                 <LinkedinIcon size={18} />
-                LinkedIn
+                <HoverDecode text="LinkedIn" />
               </a>
             </li>
           </ul>
@@ -126,7 +130,7 @@ export default function Contact() {
             className="mt-10 inline-flex items-center gap-2 rounded-full border border-hairline px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:border-ink"
           >
             <DownloadIcon size={18} />
-            {cv.label}
+            <HoverDecode text={cv.label} />
           </a>
         </Reveal>
       </div>
