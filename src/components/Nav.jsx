@@ -41,7 +41,11 @@ export default function Nav() {
                 )
               }
               className="data text-sm font-medium text-mute transition-colors duration-200 hover:text-ink"
-              aria-label="Toggle language"
+              aria-label={
+                i18n.language.startsWith("en")
+                  ? "Toggle language to ES"
+                  : "Toggle language to EN"
+              }
             >
               {i18n.language.startsWith("en") ? "ES" : "EN"}
             </button>
