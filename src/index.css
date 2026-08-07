@@ -96,9 +96,15 @@ body {
     -webkit-mask-image: linear-gradient(
       to right,
       transparent 0%,
-      black 5%,
+      black 10%,
       black 100%
     );
-    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 100%);
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 100%
+    );
+    filter: none;
   }
 }

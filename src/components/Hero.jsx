@@ -150,7 +150,7 @@ export default function Hero() {
             fetchpriority="high"
             decoding="sync"
             {...photoMotion}
-            className="hero-mask absolute inset-0 h-full w-full object-cover object-top"
+            className="hero-mask absolute inset-0 h-full w-full object-contain object-bottom"
           />
         </div>
       </div>
