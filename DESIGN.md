@@ -233,7 +233,7 @@ An editorial entry, not a card. Project name (20px semibold, ink) with its mono 
 
 ### Contact
 
-The closer: a display headline up to 4.5rem on a 16ch measure ("Have a backend worth building? Let's talk."), then the email display link with a `FaEnvelope` icon, then GitHub (`FaGithub` icon) and LinkedIn (`FaLinkedin` icon) inline links, and finally a Download CV ghost pill (`FaDownload` icon) linking to `/assets/cv.pdf`.
+The closer: a two-column grid on desktop. Left column holds the pitch (display headline up to 4.5rem on a 14ch measure), followed by GitHub (`FaGithub` icon) and LinkedIn (`FaLinkedin` icon) inline links, and finally a Download CV ghost pill (`FaDownload` icon). Right column holds the contact form (name, email, message inputs) constrained to `max-w-md`, submitting via Web3Forms, with a primary "Send Message" signal pill.
 
 ### Footer
 
