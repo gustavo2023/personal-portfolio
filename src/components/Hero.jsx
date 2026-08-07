@@ -128,7 +128,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-1.5">
               <LocationIcon size={16} />
-              {person.location}
+              <HoverDecode text={person.location} />
             </span>
             <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
               <HeroTech name="Python" />
@@ -136,7 +136,9 @@ export default function Hero() {
               <HeroTech name="PostgreSQL" />
               <HeroTech name="Docker" />
             </span>
-            <span className="text-signal-text">{person.availability}</span>
+            <span className="text-signal-text">
+              <HoverDecode text={person.availability} />
+            </span>
           </motion.div>
         </div>
 

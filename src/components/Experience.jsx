@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Reveal from "./Reveal.jsx";
 import SplitText from "./SplitText.jsx";
+import HoverDecode from "./HoverDecode.jsx";
 
 export default function Experience() {
   const { t } = useTranslation();
@@ -27,9 +28,13 @@ export default function Experience() {
           {experience.map((job, i) => (
             <Reveal key={job.id} delay={i * 0.06}>
               <article className="grid grid-cols-1 gap-6 border-t border-hairline py-10 md:grid-cols-[16rem_1fr] md:gap-12">
-                <div className="data text-mute">
-                  <p>{job.period}</p>
-                  <p className="mt-2">{job.company}</p>
+                <div className="data text-mute cursor-default">
+                  <p>
+                    <HoverDecode text={job.period} />
+                  </p>
+                  <p className="mt-2">
+                    <HoverDecode text={job.company} />
+                  </p>
                 </div>
 
                 <div>

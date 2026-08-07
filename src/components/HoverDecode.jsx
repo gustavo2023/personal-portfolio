@@ -1,15 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useReducedMotion } from "motion/react";
 
 const CHARS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':\",./<>?";
 
-function HoverChar({ realChar, isHovered }) {
+function HoverChar({ realChar, isHovered, decodeOnMount }) {
   const [scrambledChar, setScrambledChar] = useState(realChar);
+  const hasMounted = useRef(false);
 
   useEffect(() => {
-    if (!isHovered || realChar === " ") {
+    // Trigger on hover, or exactly once on mount if requested
+    if ((!isHovered && hasMounted.current) || realChar === " ") {
       return;
+    }
+
+    if (decodeOnMount && !hasMounted.current) {
+      hasMounted.current = true;
     }
 
     let iterations = 0;
@@ -27,12 +33,13 @@ function HoverChar({ realChar, isHovered }) {
     }, 30); // Very fast flicker
 
     return () => clearInterval(intervalId);
-  }, [isHovered, realChar]);
+  }, [isHovered, realChar, decodeOnMount]);
 
   if (realChar === " ") return <span>&nbsp;</span>;
 
-  // Derive the active character synchronously during render
-  const displayChar = isHovered ? scrambledChar : realChar;
+  // Show scrambled char if we are hovering or actively scrambling
+  const isAnimating = isHovered || scrambledChar !== realChar;
+  const displayChar = isAnimating ? scrambledChar : realChar;
 
   return (
     <span className="relative inline-flex items-center justify-center">
@@ -48,7 +55,7 @@ function HoverChar({ realChar, isHovered }) {
   );
 }
 
-export default function HoverDecode({ text }) {
+export default function HoverDecode({ text, decodeOnMount = false }) {
   const reduce = useReducedMotion();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -58,14 +65,19 @@ export default function HoverDecode({ text }) {
 
   return (
     <span
-      className="inline-flex cursor-pointer"
+      className="inline-flex"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className="sr-only">{text}</span>
       <span aria-hidden="true" className="inline-flex">
         {text.split("").map((char, i) => (
-          <HoverChar key={i} realChar={char} isHovered={isHovered} />
+          <HoverChar
+            key={i}
+            realChar={char}
+            isHovered={isHovered}
+            decodeOnMount={decodeOnMount}
+          />
         ))}
       </span>
     </span>

@@ -150,6 +150,8 @@ export default function Contact() {
                     placeholder={contact.namePlaceholder}
                     aria-label={contact.nameLabel}
                     required
+                    autoComplete="name"
+                    maxLength={100}
                     onInput={handleInput}
                     className={`w-full rounded-none border bg-surface px-4 py-3 text-body placeholder:text-mute focus:outline-none focus:ring-2 focus:ring-signal focus:ring-offset-[3px] focus:ring-offset-paper ${errors.name ? "border-signal" : "border-hairline focus:border-signal"}`}
                   />
@@ -164,6 +166,8 @@ export default function Contact() {
                     placeholder={contact.emailPlaceholder}
                     aria-label={contact.emailLabel}
                     required
+                    autoComplete="email"
+                    maxLength={100}
                     onInput={handleInput}
                     className={`w-full rounded-none border bg-surface px-4 py-3 text-body placeholder:text-mute focus:outline-none focus:ring-2 focus:ring-signal focus:ring-offset-[3px] focus:ring-offset-paper ${errors.email ? "border-signal" : "border-hairline focus:border-signal"}`}
                   />
@@ -180,6 +184,7 @@ export default function Contact() {
                     aria-label={contact.messageLabel}
                     rows="4"
                     required
+                    maxLength={2000}
                     onInput={handleInput}
                     className={`w-full resize-none rounded-none border bg-surface px-4 py-3 text-body placeholder:text-mute focus:outline-none focus:ring-2 focus:ring-signal focus:ring-offset-[3px] focus:ring-offset-paper ${errors.message ? "border-signal" : "border-hairline focus:border-signal"}`}
                   ></textarea>
@@ -202,7 +207,9 @@ export default function Contact() {
                     />
                   </button>
                   {result && !isSubmitting && (
-                    <span className="data text-signal-text">{result}</span>
+                    <span className="data text-signal-text">
+                      <HoverDecode text={result} decodeOnMount={true} />
+                    </span>
                   )}
                 </div>
               </fieldset>

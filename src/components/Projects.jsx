@@ -36,7 +36,9 @@ export default function Projects() {
                     <h3 className="text-2xl font-semibold tracking-tight text-ink">
                       {project.name}
                     </h3>
-                    <p className="data text-mute">{project.kind}</p>
+                    <p className="data text-mute cursor-default">
+                      <HoverDecode text={project.kind} />
+                    </p>
                   </div>
 
                   <p className="mt-4 max-w-[70ch] text-base leading-relaxed text-body">
@@ -60,7 +62,9 @@ export default function Projects() {
                 </div>
 
                 <div className="flex flex-row items-center justify-between gap-6 lg:flex-col lg:items-end lg:justify-start lg:gap-4">
-                  <p className="data text-mute">{project.date}</p>
+                  <p className="data text-mute cursor-default">
+                    <HoverDecode text={project.date} />
+                  </p>
                   <a
                     href={project.url}
                     target="_blank"
