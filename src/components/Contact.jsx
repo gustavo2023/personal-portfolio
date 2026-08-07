@@ -23,7 +23,10 @@ export default function Contact() {
     <section id="contact" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-32">
         <Reveal>
-          <h2 id="contact-heading" className="display max-w-[16ch] text-[clamp(2.4rem,5.5vw,4.5rem)]">
+          <h2
+            id="contact-heading"
+            className="display max-w-[16ch] text-[clamp(2.4rem,5.5vw,4.5rem)]"
+          >
             Have a backend worth building? Let&rsquo;s talk.
           </h2>
         </Reveal>

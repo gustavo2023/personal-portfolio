@@ -84,7 +84,9 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:bg-signal-deep"
             >
               <EmailIcon size={18} />
-              <span className="email-text">{copied ? "Copied!" : links.email.label}</span>
+              <span className="email-text">
+                {copied ? "Copied!" : links.email.label}
+              </span>
             </a>
             <a
               href={cv.url}

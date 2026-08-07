@@ -3,10 +3,17 @@ import Reveal from "./Reveal.jsx";
 
 export default function Experience() {
   return (
-    <section id="experience" aria-labelledby="experience-heading" className="border-b border-hairline">
+    <section
+      id="experience"
+      aria-labelledby="experience-heading"
+      className="border-b border-hairline"
+    >
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
         <Reveal>
-          <h2 id="experience-heading" className="display text-[clamp(2rem,4vw,3rem)]">
+          <h2
+            id="experience-heading"
+            className="display text-[clamp(2rem,4vw,3rem)]"
+          >
             Experience
           </h2>
         </Reveal>

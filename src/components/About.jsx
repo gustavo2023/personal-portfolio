@@ -25,10 +25,17 @@ export default function About() {
   const rest = about.stack.filter((s) => !CORE_STACK.includes(s));
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="border-b border-hairline">
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="border-b border-hairline"
+    >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <h2 id="about-heading" className="display text-[clamp(2rem,4vw,3rem)]">
+          <h2
+            id="about-heading"
+            className="display text-[clamp(2rem,4vw,3rem)]"
+          >
             About
           </h2>
         </Reveal>

@@ -34,7 +34,10 @@ export const about = {
 };
 
 export const links = {
-  github: { label: "github.com/gustavo2023", url: "https://github.com/gustavo2023" },
+  github: {
+    label: "github.com/gustavo2023",
+    url: "https://github.com/gustavo2023",
+  },
   linkedin: {
     label: "linkedin.com/in/gustavo-gutierrez-dev",
     url: "https://www.linkedin.com/in/gustavo-gutierrez-dev/",

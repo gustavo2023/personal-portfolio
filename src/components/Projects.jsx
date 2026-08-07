@@ -5,10 +5,17 @@ import { GithubIcon } from "./DevIcon.jsx";
 
 export default function Projects() {
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="border-b border-hairline">
+    <section
+      id="projects"
+      aria-labelledby="projects-heading"
+      className="border-b border-hairline"
+    >
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
         <Reveal>
-          <h2 id="projects-heading" className="display text-[clamp(2rem,4vw,3rem)]">
+          <h2
+            id="projects-heading"
+            className="display text-[clamp(2rem,4vw,3rem)]"
+          >
             Projects
           </h2>
         </Reveal>
@@ -34,7 +41,10 @@ export default function Projects() {
 
                   <ul className="data mt-5 flex flex-wrap gap-x-5 gap-y-2 text-mute">
                     {project.stack.map((item) => (
-                      <li key={item} className="inline-flex items-center gap-1.5">
+                      <li
+                        key={item}
+                        className="inline-flex items-center gap-1.5"
+                      >
                         <DevIcon name={item} size={18} className="shrink-0" />
                         {item}
                       </li>

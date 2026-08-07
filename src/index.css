@@ -15,8 +15,8 @@
   --color-signal-text: #ff7a33;
 
   --font-sans: "Archivo Variable", "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo,
-    monospace;
+  --font-mono:
+    "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html {

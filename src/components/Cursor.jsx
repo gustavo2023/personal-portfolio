@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { motion, useMotionValue, useSpring, useReducedMotion } from "motion/react";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useReducedMotion,
+} from "motion/react";
 
 const HOVER_SELECTOR =
   "a, button, [role='button'], input, textarea, select, [data-cursor-hover]";
