@@ -1,11 +1,13 @@
+import { Suspense, lazy } from "react";
 import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Experience from "./components/Experience.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
 import Cursor from "./components/Cursor.jsx";
+
+const About = lazy(() => import("./components/About.jsx"));
+const Experience = lazy(() => import("./components/Experience.jsx"));
+const Projects = lazy(() => import("./components/Projects.jsx"));
+const Contact = lazy(() => import("./components/Contact.jsx"));
+const Footer = lazy(() => import("./components/Footer.jsx"));
 
 export default function App() {
   return (
@@ -20,12 +22,16 @@ export default function App() {
       <Nav />
       <main id="main">
         <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
+        <Suspense fallback={<div className="h-20"></div>}>
+          <About />
+          <Experience />
+          <Projects />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </>
   );
 }

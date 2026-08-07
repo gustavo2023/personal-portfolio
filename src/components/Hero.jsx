@@ -147,6 +147,8 @@ export default function Hero() {
           <motion.img
             src={person.photo}
             alt={person.photoAlt}
+            fetchpriority="high"
+            decoding="sync"
             {...photoMotion}
             className="hero-mask absolute inset-0 h-full w-full object-cover object-top"
           />
