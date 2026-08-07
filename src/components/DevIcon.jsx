@@ -60,11 +60,11 @@ export default function DevIcon({
   const map = kind === "link" ? linkIcons : techIcons;
   const Icon = map[name];
   if (!Icon) return null;
-  return <Icon size={size} className={className} />;
+  return <Icon size={size} className={className} role="img" aria-label={`${name} icon`} />;
 }
 
-export const GithubIcon = FaGithub;
-export const LinkedinIcon = FaLinkedin;
-export const EmailIcon = FaEnvelope;
-export const DownloadIcon = FaDownload;
-export const LocationIcon = FaMapMarkerAlt;
+export const GithubIcon = (props) => <FaGithub role="img" aria-label="GitHub icon" {...props} />;
+export const LinkedinIcon = (props) => <FaLinkedin role="img" aria-label="LinkedIn icon" {...props} />;
+export const EmailIcon = (props) => <FaEnvelope role="img" aria-label="Email icon" {...props} />;
+export const DownloadIcon = (props) => <FaDownload role="img" aria-label="Download icon" {...props} />;
+export const LocationIcon = (props) => <FaMapMarkerAlt role="img" aria-label="Location icon" {...props} />;
