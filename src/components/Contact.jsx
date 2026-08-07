@@ -1,22 +1,41 @@
 import { useState } from "react";
 import { links, cv } from "../data/content.js";
 import Reveal from "./Reveal.jsx";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  EmailIcon,
-  DownloadIcon,
-} from "./DevIcon.jsx";
+import { GithubIcon, LinkedinIcon, DownloadIcon } from "./DevIcon.jsx";
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
+  const [result, setResult] = useState("");
+  // Support both standard Vite prefix and the exact variable name requested
+  const accessKey =
+    import.meta.env.VITE_FORM_ACCESS_KEY ||
+    import.meta.env.FORM_ACCESS_KEY ||
+    "";
 
-  const handleEmailClick = (e) => {
-    e.preventDefault();
-    const email = links.email.url.replace("mailto:", "");
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", accessKey);
+    formData.append("subject", "New Contact Message from your Website");
+    formData.append("from_name", "Work With Me Form");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        setResult(data.message);
+      }
+    } catch (error) {
+      setResult("Something went wrong!");
+    }
   };
 
   return (
@@ -32,18 +51,50 @@ export default function Contact() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <a
-            href={links.email.url}
-            onClick={handleEmailClick}
-            className="mt-10 inline-flex items-center gap-3 text-xl font-medium text-signal-text underline decoration-signal/40 underline-offset-8 transition-colors duration-200 hover:text-ink hover:decoration-signal md:text-2xl"
+          <form
+            onSubmit={onSubmit}
+            className="mt-12 flex max-w-md flex-col gap-4"
           >
-            <EmailIcon size={28} />
-            {copied ? "Copied to clipboard!" : links.email.label}
-          </a>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="w-full rounded-none border border-hairline bg-surface px-4 py-3 text-body placeholder:text-mute focus:border-signal focus:outline-none focus:ring-2 focus:ring-signal focus:ring-offset-[3px] focus:ring-offset-paper"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              className="w-full rounded-none border border-hairline bg-surface px-4 py-3 text-body placeholder:text-mute focus:border-signal focus:outline-none focus:ring-2 focus:ring-signal focus:ring-offset-[3px] focus:ring-offset-paper"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+              className="w-full resize-y rounded-none border border-hairline bg-surface px-4 py-3 text-body placeholder:text-mute focus:border-signal focus:outline-none focus:ring-2 focus:ring-signal focus:ring-offset-[3px] focus:ring-offset-paper"
+            ></textarea>
+
+            <div className="mt-2 flex items-center gap-4">
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-medium text-ink transition-colors duration-200 hover:bg-signal-deep"
+              >
+                Send Message
+              </button>
+              {result && (
+                <span className="text-sm font-medium text-signal-text">
+                  {result}
+                </span>
+              )}
+            </div>
+          </form>
         </Reveal>
 
         <Reveal delay={0.16}>
-          <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+          <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3">
             <li>
               <a
                 href={links.github.url}

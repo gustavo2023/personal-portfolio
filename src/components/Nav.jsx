@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { links } from "../data/content.js";
 import { EmailIcon } from "./DevIcon.jsx";
 
@@ -10,15 +9,6 @@ const anchors = [
 ];
 
 export default function Nav() {
-  const [copied, setCopied] = useState(false);
-
-  const handleEmailClick = (e) => {
-    e.preventDefault();
-    navigator.clipboard.writeText(links.email.url.replace("mailto:", ""));
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <header className="border-b border-hairline">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4 md:px-10">
@@ -40,14 +30,11 @@ export default function Nav() {
             ))}
           </ul>
           <a
-            href={links.email.url}
-            onClick={handleEmailClick}
+            href="#contact"
             className="inline-flex items-center gap-1.5 rounded-full bg-signal px-4 py-2 text-sm font-medium text-ink transition-colors duration-200 hover:bg-signal-deep"
           >
             <EmailIcon size={16} />
-            <span className="email-text">
-              {copied ? "Copied!" : "Email me"}
-            </span>
+            <span className="email-text">Email me</span>
           </a>
         </div>
       </nav>

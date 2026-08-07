@@ -78,8 +78,7 @@ export default function Hero() {
             {...rise(0.24)}
             className="mt-9 flex flex-wrap items-center gap-3"
           >
-            <a
-              href={links.email.url}
+            <button
               onClick={handleEmailClick}
               className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-medium text-ink transition-colors duration-200 hover:bg-signal-deep"
             >
@@ -87,7 +86,7 @@ export default function Hero() {
               <span className="email-text">
                 {copied ? "Copied!" : links.email.label}
               </span>
-            </a>
+            </button>
             <a
               href={cv.url}
               download
