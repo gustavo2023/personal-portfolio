@@ -1,4 +1,3 @@
-import { links } from "../data/content.js";
 import { EmailIcon } from "./DevIcon.jsx";
 
 const anchors = [

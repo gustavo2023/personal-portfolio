@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { links, cv } from "../data/content.js";
 import Reveal from "./Reveal.jsx";
+import SplitText from "./SplitText.jsx";
 import { GithubIcon, LinkedinIcon, DownloadIcon } from "./DevIcon.jsx";
 
 export default function Contact() {
@@ -33,7 +34,7 @@ export default function Contact() {
       } else {
         setResult(data.message);
       }
-    } catch (error) {
+    } catch {
       setResult("Something went wrong!");
     }
   };
@@ -41,14 +42,12 @@ export default function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-32">
-        <Reveal>
-          <h2
-            id="contact-heading"
-            className="display max-w-[16ch] text-[clamp(2.4rem,5.5vw,4.5rem)]"
-          >
-            Have a backend worth building? Let&rsquo;s talk.
-          </h2>
-        </Reveal>
+        <h2
+          id="contact-heading"
+          className="display max-w-[16ch] text-[clamp(2rem,5.5vw,4.5rem)]"
+        >
+          <SplitText text="Have a backend worth building? Let's talk." delay={0} />
+        </h2>
 
         <Reveal delay={0.08}>
           <form
@@ -100,7 +99,7 @@ export default function Contact() {
                 href={links.github.url}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
+                className="inline-flex items-center gap-1.5 p-3 -m-3 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
               >
                 <GithubIcon size={18} />
                 GitHub
@@ -111,7 +110,7 @@ export default function Contact() {
                 href={links.linkedin.url}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
+                className="inline-flex items-center gap-1.5 p-3 -m-3 text-sm font-medium text-ink underline decoration-hairline underline-offset-4 transition-colors duration-200 hover:text-signal hover:decoration-signal"
               >
                 <LinkedinIcon size={18} />
                 LinkedIn

@@ -7,6 +7,7 @@ import DevIcon, {
   EmailIcon,
   DownloadIcon,
 } from "./DevIcon.jsx";
+import SplitText from "./SplitText.jsx";
 
 const EASE = [0.16, 1, 0.3, 1];
 
@@ -52,13 +53,10 @@ export default function Hero() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Person-led: name, role, proof, contact, and key metadata inside the first glance. */}
         <div className="flex flex-col justify-center px-6 py-20 md:px-10 md:py-28 lg:min-h-[82vh]">
-          <motion.h1
-            {...rise(0)}
-            className="display text-[clamp(2.9rem,7.2vw,5.5rem)]"
-          >
-            <span className="block">Gustavo</span>
-            <span className="block">Gutierrez</span>
-          </motion.h1>
+          <h1 className="display text-[clamp(2.9rem,7.2vw,5.5rem)]">
+            <SplitText text="Gustavo" delay={0} className="block" />
+            <SplitText text="Gutierrez" delay={0.2} className="block" />
+          </h1>
 
           <motion.p
             {...rise(0.08)}

@@ -6,7 +6,7 @@ colors:
   surface: "#2a2622"
   ink: "#f7f6f4"
   body: "#d8d5d0"
-  mute: "#9e9a94"
+  mute: "#aba79f"
   hairline: "rgba(247, 246, 244, 0.12)"
   signal: "#ff4d00"
   signal-deep: "#d63f00"
@@ -131,7 +131,7 @@ A warm near-neutral dark field — canvas, surface, light ink, two grays, one tr
 - **Elevated Surface** (#2a2622, `--color-surface`): the one reserved step up from the canvas. Used in the About section for the featured core-stack chips (`Python`, `FastAPI`, `PostgreSQL`) so they read as discrete tokens without leaving the dark world. Available for future panels, cards, or detail pages.
 - **Light Ink** (#f7f6f4, `--color-ink`): headings, titles, wordmark, key link text, and the text that sits on signal fills.
 - **Warm Body** (#d8d5d0, `--color-body`): all long-form copy — bio, tagline, proof lines, project overviews, and the résumé request link.
-- **Warm Mute** (#9e9a94, `--color-mute`): the data color — mono dates, companies, stack lists, locations, footer.
+- **Warm Mute** (#aba79f, `--color-mute`): the data color — mono dates, companies, stack lists, locations, footer.
 - **Translucent Hairline** (`rgba(247, 246, 244, 0.12)`, `--color-hairline`): every border and divider at 1px; also the resting underline on inline links and the ghost-pill stroke. Derived from ink so the boundary stays subtle on dark.
 
 ### Named Rules
@@ -151,7 +151,7 @@ A warm near-neutral dark field — canvas, surface, light ink, two grays, one tr
 ### Hierarchy
 
 - **Display** (800, clamp(2.9rem, 7.2vw, 5.5rem), line-height 0.98, -0.02em, wdth 125, `text-wrap: balance`): the hero name, broken over two lines; the largest type on the page and the only voice at this scale.
-- **Headline** (800, clamp(2rem, 4vw, 3rem), same display rules): section headings — About, Experience, Projects. The contact pitch stretches the same voice to clamp(2.4rem, 5.5vw, 4.5rem) on a 16ch measure.
+- **Headline** (800, clamp(2rem, 4vw, 3rem), same display rules): section headings — About, Experience, Projects. The contact pitch stretches the same voice to clamp(2rem, 5.5vw, 4.5rem) on a 16ch measure.
 - **Title** (600, 1.25rem, line-height 1.4, -0.025em, normal width): job roles and project names.
 - **Role line** (500, 1.125rem, ink): "Software Developer — Backend systems", directly under the name.
 - **Body** (400, 1rem, line-height 1.625, warm body): all prose, with the measure capped per context — 52ch hero tagline, 68ch about bio, 70ch proof lines and project text.
