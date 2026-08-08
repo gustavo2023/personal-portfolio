@@ -42,7 +42,7 @@ function HoverChar({ realChar, isHovered, decodeOnMount }) {
     return () => clearInterval(intervalId);
   }, [isHovered, realChar, decodeOnMount]);
 
-  if (realChar === " ") return <span>&nbsp;</span>;
+  if (realChar === " ") return <span> </span>;
 
   // Show scrambled char if we are hovering or actively scrambling
   const isAnimating = isHovered || !isDecoded;
@@ -72,12 +72,12 @@ export default function HoverDecode({ text, decodeOnMount = false }) {
 
   return (
     <span
-      className="inline-flex"
+      className="inline"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className="sr-only">{text}</span>
-      <span aria-hidden="true" className="inline-flex">
+      <span aria-hidden="true" className="inline">
         {text.split("").map((char, i) => (
           <HoverChar
             key={i}
