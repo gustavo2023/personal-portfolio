@@ -35,17 +35,18 @@ export default function About() {
       aria-labelledby="about-heading"
       className="border-b border-hairline"
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
-        <Reveal>
-          <h2
-            id="about-heading"
-            className="display text-[clamp(2.5rem,5vw,4rem)]"
-          >
-            <SplitText text={nav.about} delay={0} />
-          </h2>
-        </Reveal>
+      <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
+        {/* Row 1: About Bio */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+          <Reveal>
+            <h2
+              id="about-heading"
+              className="display text-[clamp(2.5rem,5vw,4rem)]"
+            >
+              <SplitText text={nav.about} delay={0} />
+            </h2>
+          </Reveal>
 
-        <div>
           <Reveal delay={0.08}>
             <div className="relative pl-6">
               <span
@@ -57,24 +58,35 @@ export default function About() {
               </p>
             </div>
           </Reveal>
+        </div>
 
+        {/* Row 2: Tech Stack */}
+        <div className="mt-20 grid grid-cols-1 gap-12 border-t border-hairline pt-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
           <Reveal delay={0.16}>
-            <div className="mt-12 flex max-w-[68ch] flex-wrap items-center gap-3">
-              {core.map((item) => (
-                <TechChip key={item} name={item} featured />
-              ))}
-            </div>
+            <h3 className="display text-[clamp(2rem,4vw,3rem)] text-ink">
+              <SplitText text={about.techStack} delay={0.24} />
+            </h3>
           </Reveal>
 
-          <Reveal delay={0.24}>
-            <ul className="data mt-5 flex max-w-[68ch] flex-wrap gap-x-5 gap-y-2 text-mute">
-              {rest.map((item) => (
-                <li key={item}>
-                  <TechChip name={item} />
-                </li>
-              ))}
-            </ul>
-          </Reveal>
+          <div>
+            <Reveal delay={0.32}>
+              <div className="flex max-w-[68ch] flex-wrap items-center gap-3">
+                {core.map((item) => (
+                  <TechChip key={item} name={item} featured />
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.4}>
+              <ul className="data mt-5 flex max-w-[68ch] flex-wrap gap-x-5 gap-y-2 text-mute">
+                {rest.map((item) => (
+                  <li key={item}>
+                    <TechChip name={item} />
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

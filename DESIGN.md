@@ -211,7 +211,7 @@ A quiet bar over a bottom hairline. Wordmark left ("Gustavo Gutierrez", 14px sem
 
 - **Shape:** fully rounded pills (9999px), 200ms color-only transitions.
 - **Primary (signal pill):** signal fill (#ff4d00), ink text, 14px medium; padding 10px 20px in the hero, 8px 16px in the nav. Hover deepens to signal-deep (#d63f00) with ink text — the accent's loudest sanctioned moment. The hero email and nav "Email me" pills lead with the `FaEnvelope` icon.
-- **Secondary (ghost pill):** transparent on the dark canvas with a 1px hairline stroke and ink text; hover firms the stroke to ink. The hero GitHub pill uses the `FaGithub` icon; the hero LinkedIn pill uses the `FaLinkedin` icon; the hero Download CV pill uses the `FaDownload` icon and links to `/assets/cv.pdf`.
+- **Secondary (ghost pill):** transparent on the dark canvas with a 1px hairline stroke and ink text; hover firms the stroke to ink. The hero GitHub pill uses the `FaGithub` icon; the hero LinkedIn pill uses the `FaLinkedin` icon; the hero Download CV pill uses the `FaDownload` icon and links to the localized CV in the `/cv/` directory (e.g., `/cv/Gustavo-Gutierrez-CV-EN.pdf`).
 - **Focus:** the global 2px signal outline, offset 3px.
 
 ### Links
@@ -264,7 +264,7 @@ Wraps the About tech-stack chips. Uses `useMotionValue`, `useSpring`, and `useMo
 - **Do** use `react-icons` (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through `DevIcon`; render them inline at 18–22px in their label color, never as standalone decoration.
 - **Do** animate on the one expo ease (0.16, 1, 0.3, 1), rising 18–24px, once per element, and honor `prefers-reduced-motion`.
 - **Do** show the real portrait large with `.hero-mask` — the person leads the page.
-- **Do** link the Download CV button to `/assets/cv.pdf`; add the PDF at that path so the download works.
+- **Do** link the Download CV button to the appropriate localized PDF in the `/cv/` directory (e.g., `/cv/Gustavo-Gutierrez-CV-EN.pdf`); add the PDFs there so the downloads work.
 
 ### Don't:
 

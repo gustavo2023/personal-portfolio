@@ -13,6 +13,7 @@
   },
   "about": {
     "bio": "Soy un Desarrollador de Software especializado en construir arquitecturas backend robustas y seguras, pipelines de datos de extremo a extremo, y APIs REST escalables usando Python, FastAPI y PostgreSQL. Con experiencia en contenerización y despliegues en la nube, me enfoco en automatizar flujos de trabajo y entregar aplicaciones listas para producción que resuelven cuellos de botella operativos en el mundo real.",
+    "techStack": "Stack Tecnológico",
     "stack": [
       "Python",
       "JavaScript",

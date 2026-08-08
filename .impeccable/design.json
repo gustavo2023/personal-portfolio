@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-06T22:53:00Z",
+  "generatedAt": "2026-08-07T21:02:00Z",
   "title": "Design System: Gustavo Gutierrez — Portfolio",
   "extensions": {
     "colorMeta": {
@@ -352,10 +352,9 @@
       "Do separate with single 1px translucent hairlines (rgba(247, 246, 244, 0.12)) and let whitespace do the rest: 80→112px section rhythm, 40px row rhythm, 48px under headings.",
       "Do keep buttons as signal or ghost pills with 200ms color transitions.",
       "Do use react-icons (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through DevIcon; render them inline at 18–22px in their label color, never as standalone decoration.",
-      "Do use react-icons (Simple Icons for technology, Font Awesome for email / GitHub / LinkedIn / download) mapped through DevIcon; render them inline at 18–22px in their label color, never as standalone decoration.",
       "Do animate on the one expo ease (0.16, 1, 0.3, 1), rising 18–24px, once per element, and honor prefers-reduced-motion.",
       "Do show the real portrait large with .hero-mask — the person leads the page.",
-      "Do link the Download CV button to /assets/cv.pdf; add the PDF at that path so the download works."
+      "Do link the Download CV button to the appropriate localized PDF in the `/cv/` directory (e.g., `/cv/Gustavo-Gutierrez-CV-EN.pdf`); add the PDFs there so the downloads work."
     ],
     "donts": [
       "Don't add shadows, gradients, blurs, or tonal cards — separation is one hairline, declared once. (The portrait's .hero-mask drop-shadow is the lone image-edge exception, not a general elevation token.)",
